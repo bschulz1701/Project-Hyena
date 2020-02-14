@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8229,9 +8229,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </classes>
 <parts>
 <part name="U$1" library="bschulz" deviceset="MCP7940" device="SOIC"/>
-<part name="XTAL1" library="bschulz" deviceset="CRYSTAL" device="3.2X1.5"/>
-<part name="C1" library="bschulz_passives" deviceset="C-EU" device="C0603"/>
-<part name="C2" library="bschulz_passives" deviceset="C-EU" device="C0603"/>
+<part name="XTAL1" library="bschulz" deviceset="CRYSTAL" device="3.2X1.5">
+<attribute name="DIGIKEY" value="535-11937-1-ND"/>
+<attribute name="MF" value="ABS07-120-32.768KHZ-T"/>
+<attribute name="MPN" value="Abracon"/>
+</part>
+<part name="C1" library="bschulz_passives" deviceset="C-EU" device="C0603" value="6pF"/>
+<part name="C2" library="bschulz_passives" deviceset="C-EU" device="C0603" value="6pF"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="BT1" library="bschulz" deviceset="BATTERY_COIN" device="12MM"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -8314,7 +8318,7 @@ I2C_EXT_EN
 SD_CD
 SDA_CTRL
 PAR_INT*</text>
-<text x="335.28" y="78.74" size="0.6096" layer="91" align="top-left">Note:
+<text x="335.28" y="71.12" size="0.6096" layer="91" align="top-left">Note:
 Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 </plain>
 <instances>
@@ -8328,7 +8332,7 @@ Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 </instance>
 <instance part="C2" gate="G$1" x="53.34" y="40.64" smashed="yes" rot="R90">
 <attribute name="NAME" x="52.959" y="42.164" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="58.039" y="42.164" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="58.039" y="34.544" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND1" gate="1" x="63.5" y="43.18" smashed="yes" rot="R90">
 <attribute name="VALUE" x="66.04" y="40.64" size="1.778" layer="96" rot="R90"/>
@@ -8541,21 +8545,21 @@ Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 <attribute name="VALUE" x="345.44" y="96.266" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="345.44" y="83.312" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="J6" gate="G$1" x="342.9" y="73.66" smashed="yes" rot="R180">
-<attribute name="VALUE" x="345.44" y="78.486" size="1.778" layer="96" font="vector" rot="R180"/>
-<attribute name="NAME" x="345.44" y="68.072" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="J6" gate="G$1" x="342.9" y="66.04" smashed="yes" rot="R180">
+<attribute name="VALUE" x="345.44" y="70.866" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="345.44" y="60.452" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="R8" gate="G$1" x="330.2" y="78.74" smashed="yes" rot="R270">
-<attribute name="NAME" x="331.6986" y="82.55" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="326.898" y="82.55" size="1.778" layer="96" rot="R270"/>
+<instance part="R8" gate="G$1" x="330.2" y="71.12" smashed="yes" rot="R270">
+<attribute name="NAME" x="331.6986" y="74.93" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="326.898" y="74.93" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="J7" gate="G$1" x="342.9" y="58.42" smashed="yes" rot="R180">
-<attribute name="VALUE" x="345.44" y="63.246" size="1.778" layer="96" font="vector" rot="R180"/>
-<attribute name="NAME" x="345.44" y="52.832" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="J7" gate="G$1" x="342.9" y="50.8" smashed="yes" rot="R180">
+<attribute name="VALUE" x="345.44" y="55.626" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="345.44" y="45.212" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="J8" gate="G$1" x="342.9" y="43.18" smashed="yes" rot="R180">
-<attribute name="VALUE" x="345.44" y="48.006" size="1.778" layer="96" font="vector" rot="R180"/>
-<attribute name="NAME" x="345.44" y="37.592" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="J8" gate="G$1" x="342.9" y="35.56" smashed="yes" rot="R180">
+<attribute name="VALUE" x="345.44" y="40.386" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="345.44" y="29.972" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -8756,8 +8760,13 @@ Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 </segment>
 <segment>
 <pinref part="J6" gate="G$1" pin="2"/>
-<wire x1="335.28" y1="71.12" x2="330.2" y2="71.12" width="0.1524" layer="91"/>
-<label x="327.66" y="71.12" size="1.778" layer="95"/>
+<wire x1="335.28" y1="63.5" x2="330.2" y2="63.5" width="0.1524" layer="91"/>
+<label x="327.66" y="63.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J5" gate="G$1" pin="3"/>
+<wire x1="335.28" y1="86.36" x2="330.2" y2="86.36" width="0.1524" layer="91"/>
+<label x="330.2" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -8907,9 +8916,9 @@ Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 </segment>
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
-<wire x1="330.2" y1="83.82" x2="330.2" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="330.2" y1="86.36" x2="325.12" y2="86.36" width="0.1524" layer="91"/>
-<label x="325.12" y="86.36" size="1.778" layer="95"/>
+<wire x1="330.2" y1="76.2" x2="330.2" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="330.2" y1="78.74" x2="325.12" y2="78.74" width="0.1524" layer="91"/>
+<label x="325.12" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RST" class="0">
@@ -8943,6 +8952,11 @@ Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 <pinref part="SD1" gate="G$1" pin="DATA_OUT"/>
 <wire x1="22.86" y1="116.84" x2="22.86" y2="114.3" width="0.1524" layer="91"/>
 <label x="22.86" y="114.3" size="0.8128" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="MS1" gate="G$1" pin="GPIOMISO"/>
+<wire x1="111.76" y1="66.04" x2="106.68" y2="66.04" width="0.1524" layer="91"/>
+<label x="104.14" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MOSI_BUF" class="0">
@@ -9023,12 +9037,22 @@ Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 <wire x1="96.52" y1="142.24" x2="91.44" y2="142.24" width="0.1524" layer="91"/>
 <label x="88.9" y="142.24" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="MS1" gate="G$1" pin="GPIOMOSI"/>
+<wire x1="111.76" y1="68.58" x2="106.68" y2="68.58" width="0.1524" layer="91"/>
+<label x="104.14" y="68.58" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SCK" class="0">
 <segment>
 <pinref part="U25" gate="G$1" pin="2A"/>
 <wire x1="96.52" y1="139.7" x2="91.44" y2="139.7" width="0.1524" layer="91"/>
 <label x="88.9" y="139.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MS1" gate="G$1" pin="GPIOSCK"/>
+<wire x1="111.76" y1="71.12" x2="106.68" y2="71.12" width="0.1524" layer="91"/>
+<label x="106.68" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SD_CS" class="0">
@@ -9114,6 +9138,11 @@ Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 <pinref part="J2" gate="G$1" pin="3"/>
 <wire x1="304.8" y1="109.22" x2="299.72" y2="109.22" width="0.1524" layer="91"/>
 <label x="294.64" y="109.22" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J5" gate="G$1" pin="1"/>
+<wire x1="335.28" y1="91.44" x2="330.2" y2="91.44" width="0.1524" layer="91"/>
+<label x="325.12" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="I2C_EXT_EN" class="0">
@@ -9240,6 +9269,11 @@ Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 <wire x1="386.08" y1="101.6" x2="383.54" y2="101.6" width="0.1524" layer="91"/>
 <label x="383.54" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="MS1" gate="G$1" pin="GPIOA2"/>
+<wire x1="111.76" y1="81.28" x2="106.68" y2="81.28" width="0.1524" layer="91"/>
+<label x="101.6" y="81.28" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPIO1A" class="0">
 <segment>
@@ -9247,6 +9281,11 @@ Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 <wire x1="274.32" y1="106.68" x2="274.32" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="274.32" y1="104.14" x2="271.78" y2="104.14" width="0.1524" layer="91"/>
 <label x="271.78" y="104.14" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="MS1" gate="G$1" pin="GPIOA0"/>
+<wire x1="111.76" y1="86.36" x2="106.68" y2="86.36" width="0.1524" layer="91"/>
+<label x="101.6" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO1D" class="0">
@@ -9271,6 +9310,11 @@ Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 <wire x1="350.52" y1="104.14" x2="350.52" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="350.52" y1="101.6" x2="347.98" y2="101.6" width="0.1524" layer="91"/>
 <label x="347.98" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="MS1" gate="G$1" pin="GPIOA1"/>
+<wire x1="111.76" y1="83.82" x2="106.68" y2="83.82" width="0.1524" layer="91"/>
+<label x="101.6" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO3D" class="0">
@@ -9378,39 +9422,63 @@ Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
 <net name="TIP" class="0">
 <segment>
 <pinref part="J6" gate="G$1" pin="1"/>
-<wire x1="335.28" y1="73.66" x2="330.2" y2="73.66" width="0.1524" layer="91"/>
-<label x="325.12" y="73.66" size="1.778" layer="95"/>
+<wire x1="335.28" y1="66.04" x2="330.2" y2="66.04" width="0.1524" layer="91"/>
+<label x="325.12" y="66.04" size="1.778" layer="95"/>
 <pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="330.2" y1="73.66" x2="325.12" y2="73.66" width="0.1524" layer="91"/>
-<junction x="330.2" y="73.66"/>
+<wire x1="330.2" y1="66.04" x2="325.12" y2="66.04" width="0.1524" layer="91"/>
+<junction x="330.2" y="66.04"/>
 </segment>
 </net>
 <net name="VBAT+" class="0">
 <segment>
 <pinref part="J7" gate="G$1" pin="1"/>
-<wire x1="335.28" y1="58.42" x2="330.2" y2="58.42" width="0.1524" layer="91"/>
-<label x="330.2" y="58.42" size="0.8128" layer="95" rot="R180" xref="yes"/>
+<wire x1="335.28" y1="50.8" x2="330.2" y2="50.8" width="0.1524" layer="91"/>
+<label x="330.2" y="50.8" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="VSYS-" class="0">
 <segment>
 <pinref part="J8" gate="G$1" pin="2"/>
-<wire x1="335.28" y1="40.64" x2="330.2" y2="40.64" width="0.1524" layer="91"/>
-<label x="330.2" y="40.64" size="0.8128" layer="95" rot="R180" xref="yes"/>
+<wire x1="335.28" y1="33.02" x2="330.2" y2="33.02" width="0.1524" layer="91"/>
+<label x="330.2" y="33.02" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="VSYS+" class="0">
 <segment>
 <pinref part="J8" gate="G$1" pin="1"/>
-<wire x1="335.28" y1="43.18" x2="330.2" y2="43.18" width="0.1524" layer="91"/>
-<label x="330.2" y="43.18" size="0.8128" layer="95" rot="R180" xref="yes"/>
+<wire x1="335.28" y1="35.56" x2="330.2" y2="35.56" width="0.1524" layer="91"/>
+<label x="330.2" y="35.56" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="VBAT-" class="0">
 <segment>
 <pinref part="J7" gate="G$1" pin="2"/>
-<wire x1="335.28" y1="55.88" x2="330.2" y2="55.88" width="0.1524" layer="91"/>
-<label x="330.2" y="55.88" size="0.8128" layer="95" rot="R180" xref="yes"/>
+<wire x1="335.28" y1="48.26" x2="330.2" y2="48.26" width="0.1524" layer="91"/>
+<label x="330.2" y="48.26" size="0.8128" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="MS1" gate="G$1" pin="GPIOA4"/>
+<wire x1="111.76" y1="76.2" x2="106.68" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="MS1" gate="G$1" pin="GPIOA5"/>
+<wire x1="111.76" y1="73.66" x2="106.68" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GPIOXA" class="0">
+<segment>
+<pinref part="J5" gate="G$1" pin="2"/>
+<wire x1="335.28" y1="88.9" x2="330.2" y2="88.9" width="0.1524" layer="91"/>
+<label x="325.12" y="88.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MS1" gate="G$1" pin="GPIOA3"/>
+<wire x1="111.76" y1="78.74" x2="106.68" y2="78.74" width="0.1524" layer="91"/>
+<label x="101.6" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
