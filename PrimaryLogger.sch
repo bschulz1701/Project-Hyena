@@ -160,51 +160,6 @@
 <libraries>
 <library name="bschulz">
 <packages>
-<package name="SO08@1">
-<description>SOIC, 0.15 inch width</description>
-<wire x1="2.3368" y1="1.9463" x2="-2.3368" y2="1.9463" width="0.2032" layer="21"/>
-<wire x1="2.4368" y1="-1.9463" x2="2.7178" y2="-1.5653" width="0.2032" layer="21" curve="90"/>
-<wire x1="-2.7178" y1="1.4653" x2="-2.3368" y2="1.9463" width="0.2032" layer="21" curve="-90.023829"/>
-<wire x1="2.3368" y1="1.9463" x2="2.7178" y2="1.5653" width="0.2032" layer="21" curve="-90.030084"/>
-<wire x1="-2.7178" y1="-1.6653" x2="-2.3368" y2="-1.9463" width="0.2032" layer="21" curve="90.060185"/>
-<wire x1="-2.3368" y1="-1.9463" x2="2.4368" y2="-1.9463" width="0.2032" layer="21"/>
-<wire x1="2.7178" y1="-1.5653" x2="2.7178" y2="1.5653" width="0.2032" layer="21"/>
-<wire x1="-2.667" y1="0.6096" x2="-2.667" y2="-0.6604" width="0.2032" layer="21" curve="-180"/>
-<wire x1="-2.7178" y1="1.4526" x2="-2.7178" y2="0.6096" width="0.2032" layer="21"/>
-<wire x1="-2.7178" y1="-1.6653" x2="-2.7178" y2="-0.6604" width="0.2032" layer="21"/>
-<rectangle x1="-2.159" y1="-3.302" x2="-1.651" y2="-2.2733" layer="51"/>
-<rectangle x1="-0.889" y1="-3.302" x2="-0.381" y2="-2.2733" layer="51"/>
-<rectangle x1="0.381" y1="-3.302" x2="0.889" y2="-2.2733" layer="51"/>
-<rectangle x1="1.651" y1="-3.302" x2="2.159" y2="-2.2733" layer="51"/>
-<rectangle x1="-0.889" y1="2.286" x2="-0.381" y2="3.302" layer="51"/>
-<rectangle x1="0.381" y1="2.286" x2="0.889" y2="3.302" layer="51"/>
-<rectangle x1="1.651" y1="2.286" x2="2.159" y2="3.302" layer="51"/>
-<rectangle x1="-2.159" y1="2.286" x2="-1.651" y2="3.302" layer="51"/>
-<smd name="1" x="-1.905" y="-2.8" dx="0.6" dy="1.2" layer="1"/>
-<smd name="2" x="-0.635" y="-2.8" dx="0.6" dy="1.2" layer="1"/>
-<smd name="3" x="0.635" y="-2.8" dx="0.6" dy="1.2" layer="1"/>
-<smd name="4" x="1.905" y="-2.8" dx="0.6" dy="1.2" layer="1"/>
-<smd name="5" x="1.905" y="2.8" dx="0.6" dy="1.2" layer="1"/>
-<smd name="6" x="0.635" y="2.8" dx="0.6" dy="1.2" layer="1"/>
-<smd name="7" x="-0.635" y="2.8" dx="0.6" dy="1.2" layer="1"/>
-<smd name="8" x="-1.905" y="2.8" dx="0.6" dy="1.2" layer="1"/>
-<text x="-3.175" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
-<text x="3.81" y="0" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;VALUE</text>
-<polygon width="0.002540625" layer="21">
-<vertex x="-2.69875" y="-2.38125" curve="90"/>
-<vertex x="-3.01625" y="-2.06375" curve="90"/>
-<vertex x="-3.33375" y="-2.38125" curve="90"/>
-<vertex x="-3.01625" y="-2.69875" curve="90"/>
-</polygon>
-</package>
-<package name="CRYSTAL_5X3.2_2-SMD">
-<smd name="OSC1" x="-1.85" y="0" dx="2.4" dy="1.7" layer="1" rot="R90"/>
-<smd name="OSC2" x="1.85" y="0" dx="2.4" dy="1.7" layer="1" rot="R90"/>
-<wire x1="-2.5" y1="-1.6" x2="-2.5" y2="1.6" width="0.127" layer="21"/>
-<wire x1="2.5" y1="-1.6" x2="2.5" y2="1.6" width="0.127" layer="21"/>
-<wire x1="-2.5" y1="1.6" x2="2.5" y2="1.6" width="0.127" layer="21"/>
-<wire x1="-2.5" y1="-1.6" x2="2.5" y2="-1.6" width="0.127" layer="21"/>
-</package>
 <package name="CRYSTAL_3.2X1.5_2-SMD">
 <smd name="P$1" x="-1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
 <smd name="P$2" x="1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
@@ -212,11 +167,13 @@
 <wire x1="1.6" y1="0.75" x2="1.6" y2="-0.75" width="0.127" layer="21"/>
 <wire x1="1.6" y1="-0.75" x2="-1.6" y2="-0.75" width="0.127" layer="21"/>
 <wire x1="-1.6" y1="-0.75" x2="-1.6" y2="0.75" width="0.127" layer="21"/>
+<text x="0" y="1.524" size="0.6096" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
 </package>
 <package name="LINX_BAT-HLD-012-SMT">
 <smd name="GND" x="0" y="0" dx="10.16" dy="10.16" layer="1" roundness="100" cream="no"/>
 <smd name="POWER0" x="-7.62" y="0" dx="2.54" dy="5.08" layer="1"/>
 <smd name="POWER1" x="7.62" y="0" dx="2.54" dy="5.08" layer="1"/>
+<text x="-10.16" y="0" size="1.27" layer="25" font="vector" ratio="15" rot="R90" align="center">&gt;NAME</text>
 </package>
 <package name="BATT_12MM_CLIP_VERT">
 <smd name="BATT-" x="0" y="8.2" dx="2.3" dy="4.5" layer="1"/>
@@ -275,12 +232,13 @@ Generic 10 position (8 + 2) layout</description>
 <smd name="CD2" x="-11.25" y="9.1" dx="1" dy="1.5" layer="1" rot="R90"/>
 <smd name="GND@5" x="0.4" y="8.25" dx="0.8" dy="1.4" layer="1" rot="R180"/>
 <smd name="CD1" x="0" y="10.7" dx="1" dy="1.5" layer="1" rot="R180"/>
-<text x="-11.43" y="12.7" size="1.27" layer="25">Micro SD</text>
+<text x="-11.43" y="12.7" size="1.27" layer="27">Micro SD</text>
 <wire x1="-11.475" y1="0" x2="-11.475" y2="-3.15" width="0.127" layer="21"/>
 <wire x1="-11.475" y1="-3.15" x2="-10.475" y2="-4.15" width="0.127" layer="21" curve="90"/>
 <wire x1="-10.475" y1="-4.15" x2="-1.475" y2="-4.15" width="0.127" layer="21"/>
 <wire x1="-1.475" y1="-4.15" x2="-0.475" y2="-3.15" width="0.127" layer="21" curve="90"/>
 <wire x1="-0.475" y1="-3.15" x2="-0.475" y2="0" width="0.127" layer="21"/>
+<text x="-12.7" y="5.08" size="0.6096" layer="25" font="vector" ratio="15" rot="R90" align="center">&gt;NAME</text>
 </package>
 <package name="DQM_R-PX2SON-N8">
 <smd name="8" x="-0.6" y="0.45" dx="0.2" dy="0.7" layer="1"/>
@@ -1569,8 +1527,8 @@ Right angle, 2 position, female</description>
 <smd name="1" x="-0.95" y="-1" dx="0.8" dy="0.9" layer="1"/>
 <smd name="2" x="0.95" y="-1" dx="0.8" dy="0.9" layer="1"/>
 <smd name="3" x="0" y="1.1" dx="0.8" dy="0.9" layer="1"/>
-<text x="-1.651" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
-<text x="1.651" y="0" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center">&gt;VALUE</text>
+<text x="-1.651" y="0" size="0.6096" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="1.651" y="0" size="0.6096" layer="27" font="vector" ratio="15" rot="R90" align="top-center">&gt;VALUE</text>
 </package>
 <package name="TO-263/D2PAK">
 <wire x1="5" y1="-1" x2="5" y2="-3.4" width="0.2032" layer="21"/>
@@ -1689,6 +1647,150 @@ Right angle, 2 position, female</description>
 <circle x="0" y="0" radius="1.8" width="0.127" layer="39"/>
 <circle x="0" y="0" radius="2.125" width="0.127" layer="21"/>
 <pad name="P$1" x="0" y="0" drill="2.5"/>
+</package>
+<package name="CRYSTAL_5X3.2_2-SMD">
+<smd name="OSC1" x="-1.85" y="0" dx="2.4" dy="1.7" layer="1" rot="R90"/>
+<smd name="OSC2" x="1.85" y="0" dx="2.4" dy="1.7" layer="1" rot="R90"/>
+<wire x1="-2.5" y1="-1.6" x2="-2.5" y2="1.6" width="0.127" layer="21"/>
+<wire x1="2.5" y1="-1.6" x2="2.5" y2="1.6" width="0.127" layer="21"/>
+<wire x1="-2.5" y1="1.6" x2="2.5" y2="1.6" width="0.127" layer="21"/>
+<wire x1="-2.5" y1="-1.6" x2="2.5" y2="-1.6" width="0.127" layer="21"/>
+<text x="0" y="2.159" size="0.6096" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
+</package>
+<package name="HC49UP" urn="urn:adsk.eagle:footprint:37484/1">
+<description>&lt;h3&gt;HC-49/UP 11.4x4.8mm SMD Crystal&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://www.standardcrystalcorp.com/pdf%5Cc-3.pdf"&gt;Example Datasheet&lt;/a&gt;&lt;/p&gt;</description>
+<wire x1="-5.1091" y1="1.143" x2="-3.429" y2="2.0321" width="0.0508" layer="21" curve="-55.770993" cap="flat"/>
+<wire x1="-5.715" y1="1.143" x2="-5.715" y2="2.159" width="0.1524" layer="21"/>
+<wire x1="3.429" y1="2.032" x2="5.1091" y2="1.143" width="0.0508" layer="21" curve="-55.772485" cap="flat"/>
+<wire x1="5.715" y1="1.143" x2="5.715" y2="2.159" width="0.1524" layer="21"/>
+<wire x1="3.429" y1="-1.27" x2="-3.429" y2="-1.27" width="0.0508" layer="21"/>
+<wire x1="3.429" y1="-2.032" x2="-3.429" y2="-2.032" width="0.0508" layer="21"/>
+<wire x1="-3.429" y1="1.27" x2="3.429" y2="1.27" width="0.0508" layer="21"/>
+<wire x1="5.461" y1="-2.413" x2="-5.461" y2="-2.413" width="0.1524" layer="21"/>
+<wire x1="5.715" y1="-0.381" x2="6.477" y2="-0.381" width="0.1524" layer="51"/>
+<wire x1="5.715" y1="0.381" x2="6.477" y2="0.381" width="0.1524" layer="51"/>
+<wire x1="6.477" y1="-0.381" x2="6.477" y2="0.381" width="0.1524" layer="51"/>
+<wire x1="5.461" y1="-2.413" x2="5.715" y2="-2.159" width="0.1524" layer="21" curve="90"/>
+<wire x1="5.715" y1="-1.143" x2="5.715" y2="1.143" width="0.1524" layer="51"/>
+<wire x1="5.715" y1="-2.159" x2="5.715" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="3.429" y1="-1.27" x2="3.9826" y2="-1.143" width="0.0508" layer="21" curve="25.842828" cap="flat"/>
+<wire x1="3.429" y1="1.27" x2="3.9826" y2="1.143" width="0.0508" layer="21" curve="-25.842828" cap="flat"/>
+<wire x1="3.429" y1="-2.032" x2="5.109" y2="-1.1429" width="0.0508" layer="21" curve="55.771157" cap="flat"/>
+<wire x1="3.9826" y1="-1.143" x2="3.9826" y2="1.143" width="0.0508" layer="51" curve="128.314524" cap="flat"/>
+<wire x1="5.1091" y1="-1.143" x2="5.1091" y2="1.143" width="0.0508" layer="51" curve="68.456213" cap="flat"/>
+<wire x1="-5.1091" y1="-1.143" x2="-3.429" y2="-2.032" width="0.0508" layer="21" curve="55.772485" cap="flat"/>
+<wire x1="-3.9826" y1="-1.143" x2="-3.9826" y2="1.143" width="0.0508" layer="51" curve="-128.314524" cap="flat"/>
+<wire x1="-3.9826" y1="-1.143" x2="-3.429" y2="-1.27" width="0.0508" layer="21" curve="25.842828" cap="flat"/>
+<wire x1="-3.9826" y1="1.143" x2="-3.429" y2="1.27" width="0.0508" layer="21" curve="-25.842828" cap="flat"/>
+<wire x1="-6.477" y1="-0.381" x2="-6.477" y2="0.381" width="0.1524" layer="51"/>
+<wire x1="-5.1091" y1="-1.143" x2="-5.1091" y2="1.143" width="0.0508" layer="51" curve="-68.456213" cap="flat"/>
+<wire x1="-5.715" y1="-1.143" x2="-5.715" y2="-0.381" width="0.1524" layer="51"/>
+<wire x1="-5.715" y1="-0.381" x2="-5.715" y2="0.381" width="0.1524" layer="51"/>
+<wire x1="-5.715" y1="0.381" x2="-5.715" y2="1.143" width="0.1524" layer="51"/>
+<wire x1="-5.715" y1="-2.159" x2="-5.715" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="-5.715" y1="-2.159" x2="-5.461" y2="-2.413" width="0.1524" layer="21" curve="90"/>
+<wire x1="-5.715" y1="-0.381" x2="-6.477" y2="-0.381" width="0.1524" layer="51"/>
+<wire x1="-5.715" y1="0.381" x2="-6.477" y2="0.381" width="0.1524" layer="51"/>
+<wire x1="-3.429" y1="2.032" x2="3.429" y2="2.032" width="0.0508" layer="21"/>
+<wire x1="5.461" y1="2.413" x2="-5.461" y2="2.413" width="0.1524" layer="21"/>
+<wire x1="5.461" y1="2.413" x2="5.715" y2="2.159" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-5.715" y1="2.159" x2="-5.461" y2="2.413" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-0.254" y1="0.635" x2="-0.254" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-0.254" y1="-0.635" x2="0.254" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="0.254" y1="-0.635" x2="0.254" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0.254" y1="0.635" x2="-0.254" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="0.635" x2="-0.635" y2="0" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="0" x2="-0.635" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="0" x2="-1.016" y2="0" width="0.0508" layer="21"/>
+<wire x1="0.635" y1="0.635" x2="0.635" y2="0" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="0" x2="0.635" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="0" x2="1.016" y2="0" width="0.0508" layer="21"/>
+<smd name="1" x="-4.826" y="0" dx="5.334" dy="1.9304" layer="1"/>
+<smd name="2" x="4.826" y="0" dx="5.334" dy="1.9304" layer="1"/>
+<rectangle x1="-6.604" y1="-3.048" x2="6.604" y2="3.048" layer="43"/>
+<text x="-0.254" y="2.667" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.667" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+</package>
+<package name="BATT_10MM_CLIP">
+<description>&lt;b&gt;Memory Protection Devices, &lt;a href = https://www.digikey.com/product-detail/en/mpd-memory-protection-devices/BK-870/BK-870-ND/3829737&gt; BK-870 &lt;/a&gt;&lt;/b&gt;
+
+&lt;br&gt;&lt;a href = http://www.memoryprotectiondevices.com/datasheets/BK-870-datasheet.pdf&gt;Drawing&lt;/a&gt;</description>
+<smd name="BATT+1" x="-7.695" y="0" dx="3.2" dy="3.2" layer="1"/>
+<smd name="BATT+2" x="7.695" y="0" dx="3.2" dy="3.2" layer="1"/>
+<smd name="BATT-" x="0" y="0" dx="8.13" dy="8.13" layer="1" roundness="100"/>
+<wire x1="-5.865" y1="-2.965" x2="-5.865" y2="3.76" width="0.127" layer="21"/>
+<wire x1="-5.865" y1="3.76" x2="-4.365" y2="5.26" width="0.127" layer="21" curve="-90"/>
+<wire x1="-4.365" y1="5.26" x2="4.365" y2="5.26" width="0.127" layer="21"/>
+<wire x1="4.365" y1="5.26" x2="5.865" y2="3.76" width="0.127" layer="21" curve="-90"/>
+<wire x1="5.865" y1="3.76" x2="5.865" y2="-2.965" width="0.127" layer="21"/>
+<wire x1="5.865" y1="-2.965" x2="2.58" y2="-5.51" width="0.127" layer="21"/>
+<wire x1="2.58" y1="-5.51" x2="-2.58" y2="-5.51" width="0.127" layer="21"/>
+<wire x1="-2.58" y1="-5.51" x2="-5.865" y2="-2.965" width="0.127" layer="21"/>
+<wire x1="4.445" y1="5.207" x2="-4.445" y2="5.207" width="0.127" layer="21" curve="-102.680383"/>
+</package>
+<package name="BK-53">
+<description>AA Layout for &lt;a href "http://www.memoryprotectiondevices.com/datasheets/BK-53-datasheet.pdf"&gt;BK-53&lt;/a&gt; connector</description>
+<smd name="POS@2" x="-15.165" y="0" dx="3.96" dy="5.08" layer="1" rot="R180"/>
+<smd name="NEG@2" x="15.165" y="0" dx="3.96" dy="5.08" layer="1" rot="R180"/>
+<smd name="POS@1" x="-28.015" y="0" dx="2.34" dy="3.96" layer="1" rot="R90"/>
+<smd name="NEG@1" x="28.015" y="0" dx="2.34" dy="3.96" layer="1" rot="R90"/>
+<wire x1="-30.48" y1="7.5" x2="30.48" y2="7.5" width="0.127" layer="21"/>
+<wire x1="30.48" y1="7.5" x2="30.48" y2="-7.5" width="0.127" layer="21"/>
+<wire x1="30.48" y1="-7.5" x2="-30.48" y2="-7.5" width="0.127" layer="21"/>
+<wire x1="-30.48" y1="-7.5" x2="-30.48" y2="7.5" width="0.127" layer="21"/>
+<wire x1="-10.16" y1="1.27" x2="-10.16" y2="-1.27" width="0.4064" layer="21"/>
+<wire x1="-11.43" y1="0" x2="-8.89" y2="0" width="0.4064" layer="21"/>
+<wire x1="8.89" y1="0" x2="11.43" y2="0" width="0.4064" layer="21"/>
+<text x="-30.48" y="7.62" size="1.016" layer="25" font="vector" ratio="20">&gt;NAME</text>
+</package>
+<package name="DFN3X3A_8L_EP1_P">
+<description>DFN, 3x3mm, 8 pin transistor package with design from &lt;a href = "http://www.aosmd.com/res/packaging_information/DFN3x3A-8L%20EP1.pdf"&gt;Alpha Semiconductor &lt;/a&gt;</description>
+<smd name="S@1" x="-0.975" y="-1.4" dx="0.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="S@2" x="-0.325" y="-1.4" dx="0.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="S@3" x="0.325" y="-1.4" dx="0.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="G" x="0.975" y="-1.4" dx="0.5" dy="0.35" layer="1" rot="R90"/>
+<polygon width="0" layer="1">
+<vertex x="-1.225" y="1.35"/>
+<vertex x="-1.125" y="1.35"/>
+<vertex x="-1.125" y="1.651"/>
+<vertex x="-0.775" y="1.651"/>
+<vertex x="-0.775" y="1.35"/>
+<vertex x="-0.475" y="1.35"/>
+<vertex x="-0.475" y="1.651"/>
+<vertex x="-0.125" y="1.651"/>
+<vertex x="-0.125" y="1.35"/>
+<vertex x="0.125" y="1.35"/>
+<vertex x="0.125" y="1.651"/>
+<vertex x="0.475" y="1.651"/>
+<vertex x="0.475" y="1.35"/>
+<vertex x="0.775" y="1.35"/>
+<vertex x="0.775" y="1.651"/>
+<vertex x="1.125" y="1.651"/>
+<vertex x="1.125" y="1.35"/>
+<vertex x="1.225" y="1.35"/>
+<vertex x="1.225" y="0.215"/>
+<vertex x="1.605" y="0.215"/>
+<vertex x="1.605" y="-0.215"/>
+<vertex x="1.225" y="-0.215"/>
+<vertex x="1.225" y="-0.63"/>
+<vertex x="-1.225" y="-0.63"/>
+<vertex x="-1.225" y="-0.215"/>
+<vertex x="-1.605" y="-0.215"/>
+<vertex x="-1.605" y="0.215"/>
+<vertex x="-1.225" y="0.215"/>
+</polygon>
+<rectangle x1="0.127" y1="-0.508" x2="1.016" y2="-0.127" layer="31"/>
+<rectangle x1="-1.016" y1="-0.508" x2="-0.127" y2="-0.127" layer="31"/>
+<rectangle x1="-1.016" y1="0.127" x2="-0.127" y2="0.889" layer="31"/>
+<rectangle x1="0.127" y1="0.127" x2="1.016" y2="0.889" layer="31"/>
+<wire x1="-1.5" y1="1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="1.5" y2="1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="1.5" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
+<circle x="-1.778" y="-1.778" radius="0.127" width="0.127" layer="21"/>
+<text x="2.159" y="0" size="0.6096" layer="25" font="vector" ratio="15" rot="R90" align="center">&gt;NAME</text>
+<smd name="D" x="0" y="0.381" dx="1.98" dy="2.45" layer="1" rot="R90"/>
 </package>
 </packages>
 <symbols>
@@ -2060,7 +2162,7 @@ Switches electronic signals</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MCP7940">
+<deviceset name="MCP7940" prefix="U">
 <description>&lt;b&gt;MCP7940&lt;/b&gt; - RTC
  
 &lt;p&gt;Characteristics:
@@ -2084,7 +2186,7 @@ Note: These are recomendations at the time, always verify pin compatability usin
 <gate name="G$1" symbol="MCP7940" x="-2.54" y="0"/>
 </gates>
 <devices>
-<device name="SOIC" package="SO08@1">
+<device name="SOIC" package="SO08">
 <connects>
 <connect gate="G$1" pin="MFP" pad="7"/>
 <connect gate="G$1" pin="SCL" pad="6"/>
@@ -2152,6 +2254,15 @@ Note: These are recomendations at the time, always verify pin compatability usin
 </technology>
 </technologies>
 </device>
+<device name="HC-49/US" package="HC49UP">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="BATTERY_COIN" prefix="BT">
@@ -2162,7 +2273,7 @@ Note: These are recomendations at the time, always verify pin compatability usin
 <devices>
 <device name="12MM" package="LINX_BAT-HLD-012-SMT">
 <connects>
-<connect gate="G$1" pin="+" pad="POWER0 POWER1"/>
+<connect gate="G$1" pin="+" pad="POWER0 POWER1" route="any"/>
 <connect gate="G$1" pin="-" pad="GND"/>
 </connects>
 <technologies>
@@ -2177,6 +2288,24 @@ Note: These are recomendations at the time, always verify pin compatability usin
 <connects>
 <connect gate="G$1" pin="+" pad="BATT+"/>
 <connect gate="G$1" pin="-" pad="BATT-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="10MM" package="BATT_10MM_CLIP">
+<connects>
+<connect gate="G$1" pin="+" pad="BATT+1 BATT+2" route="any"/>
+<connect gate="G$1" pin="-" pad="BATT-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="AA" package="BK-53">
+<connects>
+<connect gate="G$1" pin="+" pad="POS@1 POS@2"/>
+<connect gate="G$1" pin="-" pad="NEG@1 NEG@2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2737,6 +2866,7 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/product-detail/en/texas
 <technologies>
 <technology name="">
 <attribute name="DIGIKEY" value="296-14909-1-ND" constant="no"/>
+<attribute name="DISP" value="SN74LVC1G3157" constant="no"/>
 <attribute name="MF" value="TI" constant="no"/>
 <attribute name="MPN" value="SN74LVC1G3157DCKR" constant="no"/>
 </technology>
@@ -3409,6 +3539,34 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/product-detail/en/texas
 <attribute name="DIGIKEY" value="RE1C002UNTCLCT-ND" constant="no"/>
 <attribute name="MF" value="Rohm" constant="no"/>
 <attribute name="MPN" value="RE1C002UNTCL" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-2N7002P" package="SOT23-3">
+<connects>
+<connect gate="NMOS" pin="D" pad="3"/>
+<connect gate="NMOS" pin="G" pad="1"/>
+<connect gate="NMOS" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY" value="1727-4692-1-ND" constant="no"/>
+<attribute name="MF" value="Nexperia" constant="no"/>
+<attribute name="MPN" value="2N7002P,215" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-AON7522E" package="DFN3X3A_8L_EP1_P">
+<connects>
+<connect gate="NMOS" pin="D" pad="D"/>
+<connect gate="NMOS" pin="G" pad="G"/>
+<connect gate="NMOS" pin="S" pad="S@1 S@2 S@3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY" value="785-1505-1-ND" constant="no"/>
+<attribute name="MF" value="Alpha &amp; Omega" constant="no"/>
+<attribute name="MPN" value="AON7522E" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -8813,7 +8971,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </class>
 </classes>
 <parts>
-<part name="U$1" library="bschulz" deviceset="MCP7940" device="SOIC"/>
+<part name="U9" library="bschulz" deviceset="MCP7940" device="SOIC"/>
 <part name="XTAL1" library="bschulz" deviceset="CRYSTAL" device="3.2X1.5">
 <attribute name="DIGIKEY" value="535-11937-1-ND"/>
 <attribute name="MF" value="ABS07-120-32.768KHZ-T"/>
@@ -8927,7 +9085,7 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <text x="172.72" y="68.58" size="1.778" layer="91">Flex - D,PWM</text>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="30.48" y="40.64" smashed="yes"/>
+<instance part="U9" gate="G$1" x="30.48" y="40.64" smashed="yes"/>
 <instance part="XTAL1" gate="G$1" x="48.26" y="43.18" smashed="yes" rot="R270">
 <attribute name="NAME" x="48.26" y="37.592" size="1.778" layer="95" font="vector" align="bottom-center"/>
 </instance>
@@ -9200,7 +9358,7 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <nets>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="X1"/>
+<pinref part="U9" gate="G$1" pin="X1"/>
 <pinref part="XTAL1" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="45.72" x2="48.26" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
@@ -9210,7 +9368,7 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="X2"/>
+<pinref part="U9" gate="G$1" pin="X2"/>
 <pinref part="XTAL1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="40.64" x2="48.26" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
@@ -9238,7 +9396,7 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <junction x="50.8" y="22.86"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="VSS"/>
+<pinref part="U9" gate="G$1" pin="VSS"/>
 <wire x1="20.32" y1="33.02" x2="17.78" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="33.02" x2="17.78" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
@@ -9268,6 +9426,12 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <junction x="48.26" y="116.84"/>
 <pinref part="GND44" gate="1" pin="GND"/>
 <wire x1="48.26" y1="111.76" x2="48.26" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="SD1" gate="G$1" pin="GND2"/>
+<wire x1="50.8" y1="116.84" x2="53.34" y2="116.84" width="0.1524" layer="91"/>
+<junction x="50.8" y="116.84"/>
+<pinref part="SD1" gate="G$1" pin="GND3"/>
+<wire x1="53.34" y1="116.84" x2="55.88" y2="116.84" width="0.1524" layer="91"/>
+<junction x="53.34" y="116.84"/>
 </segment>
 <segment>
 <pinref part="SD1" gate="G$1" pin="CARD_DETECT1"/>
@@ -9451,7 +9615,7 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 </net>
 <net name="SCL" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="SCL"/>
+<pinref part="U9" gate="G$1" pin="SCL"/>
 <wire x1="20.32" y1="43.18" x2="12.7" y2="43.18" width="0.1524" layer="91"/>
 <label x="12.7" y="43.18" size="1.778" layer="95"/>
 </segment>
@@ -9483,7 +9647,7 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 </net>
 <net name="RTC_INT" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="MFP"/>
+<pinref part="U9" gate="G$1" pin="MFP"/>
 <wire x1="20.32" y1="40.64" x2="12.7" y2="40.64" width="0.1524" layer="91"/>
 <label x="7.62" y="40.64" size="1.778" layer="95"/>
 </segment>
@@ -9496,7 +9660,7 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <net name="VBAT" class="0">
 <segment>
 <pinref part="BT1" gate="G$1" pin="+"/>
-<pinref part="U$1" gate="G$1" pin="VBAT"/>
+<pinref part="U9" gate="G$1" pin="VBAT"/>
 <wire x1="50.8" y1="33.02" x2="45.72" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="33.02" x2="50.8" y2="33.02" width="0.1524" layer="91"/>
@@ -9511,7 +9675,7 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <label x="76.2" y="48.26" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="VCC"/>
+<pinref part="U9" gate="G$1" pin="VCC"/>
 <wire x1="20.32" y1="35.56" x2="12.7" y2="35.56" width="0.1524" layer="91"/>
 <label x="12.7" y="35.56" size="1.778" layer="95"/>
 </segment>
@@ -9962,9 +10126,9 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <label x="243.84" y="78.74" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="MS1" gate="G$1" pin="GPIORX"/>
-<wire x1="111.76" y1="63.5" x2="106.68" y2="63.5" width="0.1524" layer="91"/>
-<label x="96.52" y="63.5" size="1.778" layer="95"/>
+<pinref part="MS1" gate="G$1" pin="GPIO13"/>
+<wire x1="154.94" y1="78.74" x2="160.02" y2="78.74" width="0.1524" layer="91"/>
+<label x="157.48" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="3V3_EXT_FAULT" class="0">
@@ -10135,7 +10299,7 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 </net>
 <net name="SDA_OB" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="SDA"/>
+<pinref part="U9" gate="G$1" pin="SDA"/>
 <wire x1="20.32" y1="45.72" x2="12.7" y2="45.72" width="0.1524" layer="91"/>
 <label x="10.16" y="45.72" size="1.778" layer="95"/>
 </segment>
@@ -10189,9 +10353,9 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <label x="50.8" y="170.18" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U8" gate="G$1" pin="GP3"/>
-<wire x1="124.46" y1="182.88" x2="132.08" y2="182.88" width="0.1524" layer="91"/>
-<label x="127" y="182.88" size="1.778" layer="95"/>
+<pinref part="U8" gate="G$1" pin="GP4"/>
+<wire x1="124.46" y1="185.42" x2="132.08" y2="185.42" width="0.1524" layer="91"/>
+<label x="127" y="185.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TIP" class="0">
@@ -10255,9 +10419,9 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <label x="243.84" y="157.48" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U8" gate="G$1" pin="GP4"/>
-<wire x1="124.46" y1="185.42" x2="132.08" y2="185.42" width="0.1524" layer="91"/>
-<label x="127" y="185.42" size="1.778" layer="95"/>
+<pinref part="U8" gate="G$1" pin="GP3"/>
+<wire x1="124.46" y1="182.88" x2="132.08" y2="182.88" width="0.1524" layer="91"/>
+<label x="127" y="182.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO_EXP_INT" class="0">
@@ -10267,9 +10431,9 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <label x="78.74" y="165.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="MS1" gate="G$1" pin="GPIO13"/>
-<wire x1="154.94" y1="78.74" x2="160.02" y2="78.74" width="0.1524" layer="91"/>
-<label x="157.48" y="78.74" size="1.778" layer="95"/>
+<pinref part="MS1" gate="G$1" pin="GPIORX"/>
+<wire x1="111.76" y1="63.5" x2="106.68" y2="63.5" width="0.1524" layer="91"/>
+<label x="96.52" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
