@@ -1141,7 +1141,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="DISP" value="MIC2005" x="0" y="118.11" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="Microchip" x="0" y="118.11" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="MIC2005A-1YM5-TR" x="0" y="118.11" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="36.576" y="63.5" size="0.6096" layer="25" font="vector" ratio="15" rot="R270" align="center"/>
+<attribute name="NAME" x="34.29" y="65.786" size="0.6096" layer="25" font="vector" ratio="15" align="center"/>
 <attribute name="VALUE" x="32.004" y="63.373" size="0.6096" layer="27" font="vector" ratio="15" rot="R270" align="center"/>
 </element>
 <element name="U2" library="bschulz" package="SOT23-5" value="MIC2091" x="25.4" y="46.99" smashed="yes" rot="R90">
