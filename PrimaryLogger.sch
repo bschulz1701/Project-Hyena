@@ -1792,6 +1792,23 @@ Right angle, 2 position, female</description>
 <text x="2.159" y="0" size="0.6096" layer="25" font="vector" ratio="15" rot="R90" align="center">&gt;NAME</text>
 <smd name="D" x="0" y="0.381" dx="1.98" dy="2.45" layer="1" rot="R90"/>
 </package>
+<package name="TESTPOINT_0603">
+<description>&lt;b&gt;Test Point&lt;/b&gt;
+0603 size, RCU model</description>
+<wire x1="-1.002" y1="0.76" x2="1.002" y2="0.76" width="0.05" layer="39"/>
+<wire x1="1.002" y1="0.76" x2="1.002" y2="-0.76" width="0.05" layer="39"/>
+<wire x1="1.002" y1="-0.76" x2="-1.002" y2="-0.76" width="0.05" layer="39"/>
+<wire x1="-1.002" y1="-0.76" x2="-1.002" y2="0.76" width="0.05" layer="39"/>
+<wire x1="-0.9" y1="0.5" x2="0.9" y2="0.5" width="0.127" layer="51"/>
+<wire x1="-0.9" y1="-0.5" x2="0.9" y2="-0.5" width="0.127" layer="51"/>
+<text x="0" y="1.241615625" size="0.6096" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
+<text x="-0.0713" y="-1.27828125" size="0.6096" layer="27" font="vector" ratio="15" align="center">&gt;VALUE</text>
+<wire x1="0.9" y1="0.5" x2="0.9" y2="-0.5" width="0.127" layer="51"/>
+<wire x1="-0.9" y1="0.5" x2="-0.9" y2="-0.5" width="0.127" layer="51"/>
+<wire x1="-0.8" y1="0.69" x2="0.8" y2="0.69" width="0.127" layer="21"/>
+<wire x1="-0.8" y1="-0.69" x2="0.8" y2="-0.69" width="0.127" layer="21"/>
+<smd name="1" x="0" y="0" dx="1.6" dy="0.8" layer="1" roundness="20"/>
+</package>
 </packages>
 <symbols>
 <symbol name="MCP7940">
@@ -2159,6 +2176,14 @@ Switches electronic signals</description>
 <circle x="0" y="0" radius="0.508" width="0.0508" layer="94"/>
 <text x="2.032" y="0.5842" size="1.778" layer="95">&gt;NAME</text>
 <text x="2.032" y="-2.4638" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="TESTPOINT">
+<pin name="P$1" x="0" y="0" visible="off" length="middle" rot="R90"/>
+<wire x1="0" y1="5.08" x2="-1.27" y2="6.35" width="0.15" layer="94"/>
+<wire x1="-1.27" y1="6.35" x2="0" y2="7.62" width="0.15" layer="94"/>
+<wire x1="0" y1="7.62" x2="1.27" y2="6.35" width="0.15" layer="94"/>
+<wire x1="1.27" y1="6.35" x2="0" y2="5.08" width="0.15" layer="94"/>
+<text x="-2.54" y="3.81" size="1.27" layer="95" rot="R90" align="center">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -3606,6 +3631,25 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/product-detail/en/texas
 <device name="2_PL" package="2_56_PLATED">
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TESTPOINT" prefix="TP">
+<gates>
+<gate name="G$1" symbol="TESTPOINT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="RCU" package="TESTPOINT_0603">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY" value="A106145CT-ND" constant="no"/>
+<attribute name="MF" value="TE Connectivity" constant="no"/>
+<attribute name="MPN" value="RCU-0C" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -6815,6 +6859,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="MF" value="Wurth" constant="no"/>
 <attribute name="MPN" value="885012005060" constant="no"/>
 </technology>
+<technology name="6PF">
+<attribute name="DIGIKEY" value="490-3104-1-ND" constant="no"/>
+<attribute name="MF" value="Murata" constant="no"/>
+<attribute name="MPN" value="GJM1555C1H6R0CB01D" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C0504" package="C0504">
@@ -8977,8 +9026,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="MF" value="ABS07-120-32.768KHZ-T"/>
 <attribute name="MPN" value="Abracon"/>
 </part>
-<part name="C1" library="bschulz_passives" deviceset="C-EU" device="C0402" value="6pF"/>
-<part name="C2" library="bschulz_passives" deviceset="C-EU" device="C0402" value="6pF"/>
+<part name="C1" library="bschulz_passives" deviceset="C-EU" device="C0402" technology="6PF" value="6pF"/>
+<part name="C2" library="bschulz_passives" deviceset="C-EU" device="C0402" technology="6PF" value="6pF"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="BT1" library="bschulz" deviceset="BATTERY_COIN" device="12MM"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9051,9 +9100,19 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="Q1" library="bschulz" deviceset="MOSFET-NCH" device="-DMG3404L" value="DMG3404"/>
 <part name="Q2" library="bschulz" deviceset="MOSFET-NCH" device="-DMG3404L" value="DMG3404"/>
-<part name="C13" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF"/>
+<part name="C13" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF" value="0.1uF"/>
 <part name="H1" library="bschulz" deviceset="MOUNTING_HOLE" device="4_NP"/>
 <part name="H2" library="bschulz" deviceset="MOUNTING_HOLE" device="4_NP"/>
+<part name="TP2" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP1" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP4" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP5" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP6" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP3" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP10" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP7" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP9" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP8" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
 </parts>
 <sheets>
 <sheet>
@@ -9083,6 +9142,7 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <text x="172.72" y="73.66" size="1.778" layer="91">Flex - D,PWM</text>
 <text x="172.72" y="71.12" size="1.778" layer="91">Flex - D,PWM</text>
 <text x="172.72" y="68.58" size="1.778" layer="91">Flex - D,PWM</text>
+<text x="307.34" y="210.82" size="2.54" layer="91">Remove for production!</text>
 </plain>
 <instances>
 <instance part="U9" gate="G$1" x="30.48" y="40.64" smashed="yes"/>
@@ -9352,6 +9412,36 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <attribute name="NAME" x="106.172" y="15.8242" size="1.778" layer="95"/>
 <attribute name="VALUE" x="106.172" y="12.7762" size="1.778" layer="96"/>
 </instance>
+<instance part="TP2" gate="G$1" x="335.28" y="205.74" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.09" y="208.28" size="1.27" layer="95" align="center"/>
+</instance>
+<instance part="TP1" gate="G$1" x="335.28" y="200.66" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.09" y="203.2" size="1.27" layer="95" align="center"/>
+</instance>
+<instance part="TP4" gate="G$1" x="335.28" y="195.58" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.09" y="198.12" size="1.27" layer="95" align="center"/>
+</instance>
+<instance part="TP5" gate="G$1" x="335.28" y="190.5" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.09" y="193.04" size="1.27" layer="95" align="center"/>
+</instance>
+<instance part="TP6" gate="G$1" x="335.28" y="185.42" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.09" y="187.96" size="1.27" layer="95" align="center"/>
+</instance>
+<instance part="TP3" gate="G$1" x="335.28" y="180.34" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.09" y="182.88" size="1.27" layer="95" align="center"/>
+</instance>
+<instance part="TP10" gate="G$1" x="335.28" y="175.26" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.09" y="177.8" size="1.27" layer="95" align="center"/>
+</instance>
+<instance part="TP7" gate="G$1" x="335.28" y="170.18" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.09" y="172.72" size="1.27" layer="95" align="center"/>
+</instance>
+<instance part="TP9" gate="G$1" x="335.28" y="165.1" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.09" y="167.64" size="1.27" layer="95" align="center"/>
+</instance>
+<instance part="TP8" gate="G$1" x="335.28" y="160.02" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.09" y="162.56" size="1.27" layer="95" align="center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9595,6 +9685,11 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <wire x1="302.26" y1="27.94" x2="307.34" y2="27.94" width="0.1524" layer="91"/>
 <label x="307.34" y="27.94" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="TP1" gate="G$1" pin="P$1"/>
+<wire x1="335.28" y1="200.66" x2="330.2" y2="200.66" width="0.1524" layer="91"/>
+<label x="330.2" y="200.66" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="SDA" class="0">
 <segment>
@@ -9611,6 +9706,11 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <wire x1="198.12" y1="180.34" x2="190.5" y2="180.34" width="0.1524" layer="91"/>
 <label x="190.5" y="180.34" size="1.778" layer="95"/>
 <pinref part="U5" gate="G$1" pin="A"/>
+</segment>
+<segment>
+<pinref part="TP4" gate="G$1" pin="P$1"/>
+<wire x1="335.28" y1="195.58" x2="330.2" y2="195.58" width="0.1524" layer="91"/>
+<label x="330.2" y="195.58" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -9644,6 +9744,11 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <wire x1="93.98" y1="175.26" x2="88.9" y2="175.26" width="0.1524" layer="91"/>
 <label x="88.9" y="175.26" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="TP5" gate="G$1" pin="P$1"/>
+<wire x1="335.28" y1="190.5" x2="330.2" y2="190.5" width="0.1524" layer="91"/>
+<label x="330.2" y="190.5" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="RTC_INT" class="0">
 <segment>
@@ -9655,6 +9760,11 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <pinref part="MS1" gate="G$1" pin="GPIO6"/>
 <wire x1="154.94" y1="66.04" x2="160.02" y2="66.04" width="0.1524" layer="91"/>
 <label x="157.48" y="66.04" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TP7" gate="G$1" pin="P$1"/>
+<wire x1="335.28" y1="170.18" x2="330.2" y2="170.18" width="0.1524" layer="91"/>
+<label x="330.2" y="170.18" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="VBAT" class="0">
@@ -10053,6 +10163,11 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <wire x1="335.28" y1="91.44" x2="330.2" y2="91.44" width="0.1524" layer="91"/>
 <label x="325.12" y="91.44" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="TP2" gate="G$1" pin="P$1"/>
+<wire x1="335.28" y1="205.74" x2="330.2" y2="205.74" width="0.1524" layer="91"/>
+<label x="330.2" y="205.74" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="SDA_EXT" class="0">
 <segment>
@@ -10129,6 +10244,11 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <pinref part="MS1" gate="G$1" pin="GPIO13"/>
 <wire x1="154.94" y1="78.74" x2="160.02" y2="78.74" width="0.1524" layer="91"/>
 <label x="157.48" y="78.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TP10" gate="G$1" pin="P$1"/>
+<wire x1="335.28" y1="175.26" x2="330.2" y2="175.26" width="0.1524" layer="91"/>
+<label x="330.2" y="175.26" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="3V3_EXT_FAULT" class="0">
@@ -10323,6 +10443,11 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <wire x1="93.98" y1="177.8" x2="88.9" y2="177.8" width="0.1524" layer="91"/>
 <label x="83.82" y="177.8" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="TP6" gate="G$1" pin="P$1"/>
+<wire x1="335.28" y1="185.42" x2="330.2" y2="185.42" width="0.1524" layer="91"/>
+<label x="330.2" y="185.42" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="SDA_CTRL" class="0">
 <segment>
@@ -10357,6 +10482,11 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <wire x1="124.46" y1="185.42" x2="132.08" y2="185.42" width="0.1524" layer="91"/>
 <label x="127" y="185.42" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="TP9" gate="G$1" pin="P$1"/>
+<wire x1="335.28" y1="165.1" x2="330.2" y2="165.1" width="0.1524" layer="91"/>
+<label x="330.2" y="165.1" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="TIP" class="0">
 <segment>
@@ -10371,6 +10501,11 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <pinref part="MS1" gate="G$1" pin="GPIOA4"/>
 <wire x1="111.76" y1="76.2" x2="106.68" y2="76.2" width="0.1524" layer="91"/>
 <label x="101.6" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TP8" gate="G$1" pin="P$1"/>
+<wire x1="335.28" y1="160.02" x2="330.2" y2="160.02" width="0.1524" layer="91"/>
+<label x="330.2" y="160.02" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="VSYS-" class="0">
@@ -10422,6 +10557,11 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <pinref part="U8" gate="G$1" pin="GP3"/>
 <wire x1="124.46" y1="182.88" x2="132.08" y2="182.88" width="0.1524" layer="91"/>
 <label x="127" y="182.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TP3" gate="G$1" pin="P$1"/>
+<wire x1="335.28" y1="180.34" x2="330.2" y2="180.34" width="0.1524" layer="91"/>
+<label x="330.2" y="180.34" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IO_EXP_INT" class="0">
