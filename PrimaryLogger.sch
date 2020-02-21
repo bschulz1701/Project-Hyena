@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -9046,15 +9046,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="MS1" library="bschulz" deviceset="FEATHERWING" device="_NODIM"/>
 <part name="U1" library="bschulz" deviceset="MIC2005" device=""/>
 <part name="C4" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="1UF" value="1uF"/>
-<part name="C5" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="10UF" value="10uF"/>
+<part name="C5" library="bschulz_passives" deviceset="C-EU" device="C0805" technology="10UF" value="10uF"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R1" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="100K" value="100k"/>
 <part name="R2" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="100K" value="100k"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U2" library="bschulz" deviceset="MIC209*" device="" technology="1" value="MIC2091"/>
-<part name="C6" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="10UF" value="10uF"/>
-<part name="C7" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="10UF" value="10uF"/>
+<part name="C6" library="bschulz_passives" deviceset="C-EU" device="C0805" technology="10UF" value="10uF"/>
+<part name="C7" library="bschulz_passives" deviceset="C-EU" device="C0805" technology="10UF" value="10uF"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R3" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="100K" value="100k"/>
@@ -9076,7 +9076,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP4" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_PASTE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39293/1"/>
 <part name="JP5" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_PASTE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39293/1"/>
 <part name="JP6" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_PASTE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39293/1"/>
-<part name="U5" library="bschulz" deviceset="SN74LVC1G3157" device="DRL"/>
+<part name="U5" library="bschulz" deviceset="SN74LVC1G3157" device="SC70" value="SN74LVC1G3157SC70"/>
 <part name="R6" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="100K" value="100k"/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R7" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="100K" value="100k"/>
@@ -9317,7 +9317,8 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <attribute name="NAME" x="383.54" y="108.839" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="U5" gate="G$1" x="210.82" y="180.34" smashed="yes">
-<attribute name="NAME" x="207.518" y="186.69" size="1.27" layer="96"/>
+<attribute name="NAME" x="210.82" y="168.91" size="1.27" layer="96" align="center"/>
+<attribute name="DISP" x="210.82" y="186.944" size="1.27" layer="95" ratio="15" align="center"/>
 </instance>
 <instance part="R6" gate="G$1" x="185.42" y="172.72" smashed="yes" rot="R90">
 <attribute name="NAME" x="183.9214" y="168.91" size="1.778" layer="95" rot="R90"/>
