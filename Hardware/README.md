@@ -24,3 +24,11 @@
 | 17/ADC2 | `GPIO1A` | IO | General digital/analog IO pin for external sensors (J1 Connector) |
 | 18/ADC1 | `GPIO2A` | IO | General digital/analog IO pin for external sensors (J2 Connector) |
 | 19/ADC0 | `GPIO3A` | IO | General digital/analog IO pin for external sensors (J3 Connector) |
+
+| IO Expander Pin | Hyena Pin Name | Control | Function |
+| --------------- | -------------- | ------- | -------- |
+| 0 | `3V3_EXT_FAULT` | Input | Monitor pin for external 3v3 rail, if over current trip, pin is pulled low, natively high |
+| 1 | `3V3_SE_FAULT` | Input | Monitor pin for SD card 3v3 rail, if over current trip, pin is pulled low, natively high |
+| 2 | `SD_CD` | Input | Card detect pin for SD card, natively high, pulled low to indicate physical presence of SD card | 
+| 3 | `I2C_EXT_EN` | Output | Control line for external I2C buffer, natively high (on), can be pulled low to turn off the external I2C bus | 
+| 4 | `PAR_INT` | Input | Event interrupt line from TCS3400 light sensor (used for PAR measurement), active low interrupt |
