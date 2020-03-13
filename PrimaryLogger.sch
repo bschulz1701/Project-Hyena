@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -9185,6 +9185,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="7.62" y="203.2" size="3.81" layer="91">Digital Core</text>
 <text x="7.62" y="45.72" size="3.81" layer="91">Sensors</text>
 <text x="144.78" y="203.2" size="3.81" layer="91">Power</text>
+<text x="93.98" y="17.78" size="1.778" layer="91">ADR 0x39</text>
+<text x="93.98" y="38.1" size="1.778" layer="91">ADR 0x70</text>
+<text x="48.26" y="91.44" size="1.778" layer="91">ADR 0x6F</text>
+<text x="50.8" y="154.94" size="1.778" layer="91">ADR 0x20</text>
 </plain>
 <instances>
 <instance part="U9" gate="G$1" x="50.8" y="106.68" smashed="yes"/>
