@@ -3667,22 +3667,38 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/product-detail/en/texas
 <devices>
 <device name="2_NP" package="2_56">
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DIGIKEY" value="DNP" constant="no"/>
+<attribute name="MF" value="N/A" constant="no"/>
+<attribute name="MPN" value="DNP" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="4_NP" package="4_40">
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DIGIKEY" value="DNP" constant="no"/>
+<attribute name="MF" value="N/A" constant="no"/>
+<attribute name="MPN" value="DNP" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="4_PL" package="4_40_PLATED">
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DIGIKEY" value="DNP" constant="no"/>
+<attribute name="MF" value="N/A" constant="no"/>
+<attribute name="MPN" value="DNP" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="2_PL" package="2_56_PLATED">
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DIGIKEY" value="DNP" constant="no"/>
+<attribute name="MF" value="N/A" constant="no"/>
+<attribute name="MPN" value="DNP" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -9304,12 +9320,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="FRAME1" library="bschulz" deviceset="FRAME_A_L" device="">
 <attribute name="DESIGNER" value="Bobby Schulz"/>
 <attribute name="PROJECT" value="Hyena"/>
-<attribute name="REV" value="0.0"/>
+<attribute name="REV" value="0.1"/>
 </part>
 <part name="FRAME2" library="bschulz" deviceset="FRAME_A_L" device="">
 <attribute name="DESIGNER" value="Bobby Schulz"/>
 <attribute name="PROJECT" value="Hyena"/>
-<attribute name="REV" value="0.0"/>
+<attribute name="REV" value="0.1"/>
 </part>
 <part name="C14" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF" value="0.1uF"/>
 <part name="JP7" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NC_PASTE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39282/1"/>

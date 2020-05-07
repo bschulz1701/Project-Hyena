@@ -3,7 +3,7 @@
 <eagle version="9.4.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -283,7 +283,6 @@
 v0.1
 Bobby Schulz
 UMN/GEMS</text>
-<text x="34.29" y="52.578" size="1.016" layer="52" font="vector" ratio="15" rot="MR0" align="center">PORT1</text>
 <text x="30.48" y="53.34" size="0.8128" layer="52" font="vector" ratio="15" rot="MR0" align="center">JP1</text>
 <text x="30.48" y="45.72" size="0.8128" layer="52" font="vector" ratio="15" rot="MR0" align="center">JP2</text>
 <text x="30.48" y="41.91" size="0.8128" layer="52" font="vector" ratio="15" rot="MR0" align="center">JP3</text>
@@ -1424,8 +1423,16 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="NAME" x="11.303" y="28.702" size="0.6096" layer="25" font="vector" ratio="15" rot="R180" align="center"/>
 <attribute name="VALUE" x="12.7" y="26.797" size="0.6096" layer="27" font="vector" ratio="15" rot="R90" align="center"/>
 </element>
-<element name="H1" library="bschulz" package="4_40" value="" x="4.3915" y="67.056" smashed="yes"/>
-<element name="H2" library="bschulz" package="4_40" value="" x="34.544" y="3.556" smashed="yes"/>
+<element name="H1" library="bschulz" package="4_40" value="" x="4.3915" y="67.056" smashed="yes">
+<attribute name="DIGIKEY" value="DNP" x="4.3915" y="67.056" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="N/A" x="4.3915" y="67.056" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="DNP" x="4.3915" y="67.056" size="1.778" layer="27" display="off"/>
+</element>
+<element name="H2" library="bschulz" package="4_40" value="" x="34.544" y="3.556" smashed="yes">
+<attribute name="DIGIKEY" value="DNP" x="34.544" y="3.556" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="N/A" x="34.544" y="3.556" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="DNP" x="34.544" y="3.556" size="1.778" layer="27" display="off"/>
+</element>
 <element name="TP2" library="bschulz" package="TESTPOINT_0603" value="TESTPOINTRCU" x="21.336" y="44.577" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="A106145CT-ND" x="21.336" y="44.577" size="1.016" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 <attribute name="MF" value="TE Connectivity" x="21.336" y="44.577" size="1.016" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
