@@ -1809,6 +1809,35 @@ Right angle, 2 position, female</description>
 <wire x1="-0.8" y1="-0.69" x2="0.8" y2="-0.69" width="0.127" layer="21"/>
 <smd name="1" x="0" y="0" dx="1.6" dy="0.8" layer="1" roundness="20"/>
 </package>
+<package name="SCREWTERMINAL-3.5MM-2_ROUND_RESTRICT">
+<description>&lt;h3&gt;Screw Terminal  3.5mm Pitch - 2 Pin PTH&lt;/h3&gt;
+&lt;p&gt;Specifications:
+&lt;ul&gt;&lt;li&gt;Pin count: 2&lt;/li&gt;
+&lt;li&gt;Pin pitch: 3.5mm/138mil&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=”https://www.sparkfun.com/datasheets/Prototyping/Screw-Terminal-3.5mm.pdf”&gt;Datasheet referenced for footprint&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;CONN_02&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<circle x="2" y="3" radius="0.2828" width="0.127" layer="51"/>
+<wire x1="-1.75" y1="3.4" x2="5.25" y2="3.4" width="0.2032" layer="21"/>
+<wire x1="5.25" y1="3.4" x2="5.25" y2="-2.8" width="0.2032" layer="21"/>
+<wire x1="5.25" y1="-2.8" x2="5.25" y2="-3.6" width="0.2032" layer="21"/>
+<wire x1="5.25" y1="-3.6" x2="-1.75" y2="-3.6" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-3.6" x2="-1.75" y2="-2.8" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-2.8" x2="-1.75" y2="3.4" width="0.2032" layer="21"/>
+<wire x1="5.25" y1="-2.8" x2="-1.75" y2="-2.8" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-1.35" x2="-2.25" y2="-1.35" width="0.2032" layer="39"/>
+<wire x1="-2.25" y1="-1.35" x2="-2.25" y2="-2.35" width="0.2032" layer="39"/>
+<wire x1="-2.25" y1="-2.35" x2="-1.75" y2="-2.35" width="0.2032" layer="39"/>
+<wire x1="5.25" y1="3.15" x2="5.75" y2="3.15" width="0.2032" layer="39"/>
+<wire x1="5.75" y1="3.15" x2="5.75" y2="2.15" width="0.2032" layer="39"/>
+<wire x1="5.75" y1="2.15" x2="5.25" y2="2.15" width="0.2032" layer="39"/>
+<pad name="1" x="0" y="0" drill="1.2" diameter="2.032"/>
+<pad name="2" x="3.5" y="0" drill="1.2" diameter="2.032"/>
+<text x="-1.27" y="2.54" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
+<text x="-1.27" y="1.27" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="MCP7940">
@@ -2416,9 +2445,22 @@ Note: These are recomendations at the time, always verify pin compatability usin
 </device>
 </devices>
 </deviceset>
-<deviceset name="MICRO_SD">
-<description>Micro SD card holder, Push-Pull, Exposed leads for easy (non-reflow) soldering
-PN: HR1941CT-ND</description>
+<deviceset name="MICRO_SD" prefix="SD">
+<description>&lt;b&gt;Micro SD Card&lt;/b&gt; - Card Detect, Exposed leads for non-reflow soldering
+ 
+&lt;p&gt;Characteristics:
+&lt;ul&gt;
+&lt;li&gt; Number of Positions: 10 (8 + 2) &lt;/li&gt;
+&lt;li&gt; Insertion/Removal: Push In, Pull Out &lt;/li&gt;
+&lt;li&gt; Switch: Yes &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+ 
+&lt;p&gt;Digikey: &lt;br&gt;
+&lt;ul&gt;
+&lt;a href = "https://www.digikey.com/product-detail/en/amphenol-icc-commercial-products/114-00841-68/114-00841-68-1-ND/2187101"&gt; 114-00841-68-1-ND (Amphenol) &lt;/a&gt;&lt;br/&gt;
+&lt;a href = "https://www.digikey.com/product-detail/en/hirose-electric-co-ltd/DM3D-SF/HR1941CT-ND/1786515"&gt; HR1941CT-ND (Hirose Alternative) &lt;/a&gt;&lt;br/&gt;
+&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="SD_MICRO" x="2.54" y="-10.16"/>
 </gates>
@@ -2442,9 +2484,9 @@ PN: HR1941CT-ND</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DIGIKEY" value="" constant="no"/>
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
+<attribute name="DIGIKEY" value="114-00841-68-1-ND" constant="no"/>
+<attribute name="MF" value="Amphenol" constant="no"/>
+<attribute name="MPN" value="114-00841-68" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2641,61 +2683,6 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/scripts/DkSearch/dksus.
 </connects>
 <technologies>
 <technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MIC209*" prefix="U">
-<description>&lt;b&gt;MIC209x&lt;/b&gt; - Hight Side Load Switch, with Fixed Current Limit 
- 
-&lt;p&gt;Characteristics:
-&lt;ul&gt;
-&lt;li&gt;Vin: 1.8v ~ 5.5v&lt;/li&gt;
-&lt;li&gt; I&lt;sub&gt;Q&lt;/sub&gt;: 5&amp;mu;A (OFF), 70&amp;mu;A (ON) &lt;/li&gt;
-&lt;li&gt;R&lt;sub&gt;DS(ON)&lt;/sub&gt;: 700m&amp;Omega; (Vin = 5v), 790m&amp;Omega; (Vin = 3.3v)&lt;/li&gt;
-&lt;li&gt;UVLO: 1.75V&lt;/li&gt;
-&lt;li&gt; Output Current: 50/100mA (MIC2090/MIC2091) &lt;/li&gt;
-&lt;li&gt;Operating Temperature: -40°C to 125°C&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/p&gt;
- 
-&lt;p&gt;Digikey: &lt;br&gt;
-&lt;ul&gt;
-&lt;a href = "https://www.digikey.com/product-detail/en/microchip-technology/MIC2091-1YM5-TR/576-3891-1-ND/2650466"&gt; MIC2091-1 &lt;/a&gt;&lt;br/&gt;
-
-&lt;a href = "https://www.digikey.com/product-detail/en/microchip-technology/MIC2090-1YM5-TR/576-3890-1-ND/2650465"&gt; MIC2090-1 &lt;/a&gt;&lt;br/&gt;
-&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="MIC2090" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT23-5">
-<connects>
-<connect gate="G$1" pin="!FAULT" pad="4"/>
-<connect gate="G$1" pin="EN" pad="3"/>
-<connect gate="G$1" pin="GND" pad="2"/>
-<connect gate="G$1" pin="VIN" pad="1"/>
-<connect gate="G$1" pin="VOUT" pad="5"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DIGIKEY" value="" constant="no"/>
-<attribute name="DISP" value="" constant="no"/>
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-</technology>
-<technology name="0">
-<attribute name="DIGIKEY" value="576-3890-1-ND" constant="no"/>
-<attribute name="DISP" value="MIC2090" constant="no"/>
-<attribute name="MF" value="Microchip" constant="no"/>
-<attribute name="MPN" value="MIC2090-1YM5-TR" constant="no"/>
-</technology>
-<technology name="1">
-<attribute name="DIGIKEY" value="576-3891-1-ND" constant="no"/>
-<attribute name="DISP" value="MIC2091" constant="no"/>
-<attribute name="MF" value="Microchip" constant="no"/>
-<attribute name="MPN" value="MIC2091-1YM5-TR" constant="no"/>
-</technology>
 </technologies>
 </device>
 </devices>
@@ -3385,6 +3372,19 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/product-detail/en/texas
 </technology>
 </technologies>
 </device>
+<device name="3.5MM_ROUND_RESTRICT" package="SCREWTERMINAL-3.5MM-2_ROUND_RESTRICT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY" value="ED2635-ND" constant="no"/>
+<attribute name="MF" value="On Shore" constant="no"/>
+<attribute name="MPN" value="OSTTE020161" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="MCP23008" prefix="U">
@@ -3630,6 +3630,20 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/product-detail/en/texas
 <attribute name="DIGIKEY" value="785-1505-1-ND" constant="no"/>
 <attribute name="MF" value="Alpha &amp; Omega" constant="no"/>
 <attribute name="MPN" value="AON7522E" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-ZXMN3B14FTA" package="SOT23-3">
+<connects>
+<connect gate="NMOS" pin="D" pad="3"/>
+<connect gate="NMOS" pin="G" pad="1"/>
+<connect gate="NMOS" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY" value="ZXMN3B14FCT-ND" constant="no"/>
+<attribute name="MF" value="Diodes Inc" constant="no"/>
+<attribute name="MPN" value="ZXMN3B14FTA" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -6993,6 +7007,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="MF" value="Kemet" constant="no"/>
 <attribute name="MPN" value="C0603C221J5GACTU" constant="no"/>
 </technology>
+<technology name="22PF">
+<attribute name="DIGIKEY" value="399-7874-1-ND" constant="no"/>
+<attribute name="MF" value="KEMET" constant="no"/>
+<attribute name="MPN" value="C0603C220J1GACTU" constant="no"/>
+</technology>
 <technology name="4.7UF">
 <attribute name="DIGIKEY" value="490-10481-1-ND" constant="no"/>
 <attribute name="MF" value="Murata" constant="no"/>
@@ -7902,7 +7921,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="VALUE_PART" value="1.8k" constant="no"/>
 </technology>
 <technology name="100K">
-<attribute name="DIGIKEY" value="RC0402FR-071ML" constant="no"/>
+<attribute name="DIGIKEY" value="311-100KHRCT-ND" constant="no"/>
 <attribute name="MF" value="Yageo" constant="no"/>
 <attribute name="MPN" value="RC0603FR-07100KL" constant="no"/>
 <attribute name="VALUE_PART" value="100k" constant="no"/>
@@ -7919,11 +7938,23 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="MPN" value="RMCF0603FT10M0" constant="no"/>
 <attribute name="VALUE_PART" value="10M" constant="no"/>
 </technology>
+<technology name="115K">
+<attribute name="DIGIKEY" value="311-115KHRCT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0603FR-07115KL" constant="no"/>
+<attribute name="VALUE_PART" value="115k" constant="no"/>
+</technology>
 <technology name="120K">
 <attribute name="DIGIKEY" value="311-120KHRCT-ND" constant="no"/>
 <attribute name="MF" value="Yageo" constant="no"/>
 <attribute name="MPN" value="RC0603FR-07120KL" constant="no"/>
 <attribute name="VALUE_PART" value="120k" constant="no"/>
+</technology>
+<technology name="13.3K">
+<attribute name="DIGIKEY" value="311-13.3KHRCT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0603FR-0713K3L" constant="no"/>
+<attribute name="VALUE_PART" value="13.3k" constant="no"/>
 </technology>
 <technology name="130K">
 <attribute name="DIGIKEY" value="311-130KHRCT-ND" constant="no"/>
@@ -7936,6 +7967,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="MF" value="Yageo" constant="no"/>
 <attribute name="MPN" value="RC0603FR-07143KL" constant="no"/>
 <attribute name="VALUE_PART" value="143k" constant="no"/>
+</technology>
+<technology name="150">
+<attribute name="DIGIKEY" value="311-150HRCT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0603FR-07150RL" constant="no"/>
+<attribute name="VALUE_PART" value="150" constant="no"/>
 </technology>
 <technology name="180K">
 <attribute name="DIGIKEY" value="P180KHCT-ND" constant="no"/>
@@ -7985,6 +8022,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="MPN" value="RC0603FR-07220RL" constant="no"/>
 <attribute name="VALUE_PART" value="220" constant="no"/>
 </technology>
+<technology name="240K">
+<attribute name="DIGIKEY" value="311-240KHRCT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0603FR-07240KL" constant="no"/>
+<attribute name="VALUE_PART" value="240k" constant="no"/>
+</technology>
 <technology name="27">
 <attribute name="DIGIKEY" value="311-27.0HRCT-ND" constant="no"/>
 <attribute name="MF" value="Yageo" constant="no"/>
@@ -8027,6 +8070,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="MPN" value="RC0603FR-07422KL" constant="no"/>
 <attribute name="VALUE_PART" value="422k" constant="no"/>
 </technology>
+<technology name="430K">
+<attribute name="DIGIKEY" value="311-430KHRCT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0603FR-07430KL" constant="no"/>
+<attribute name="VALUE_PART" value="430k" constant="no"/>
+</technology>
 <technology name="470">
 <attribute name="DIGIKEY" value="311-470HRCT-ND" constant="no"/>
 <attribute name="MF" value="Yageo" constant="no"/>
@@ -8038,6 +8087,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="MF" value="Yageo" constant="no"/>
 <attribute name="MPN" value="RC0603JR-07470KL" constant="no"/>
 <attribute name="VALUE_PART" value="470k" constant="no"/>
+</technology>
+<technology name="56">
+<attribute name="DIGIKEY" value="311-56.0HRCT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0603FR-0756RL" constant="no"/>
+<attribute name="VALUE_PART" value="56" constant="no"/>
 </technology>
 <technology name="590K">
 <attribute name="DIGIKEY" value="311-590KHRCT-ND" constant="no"/>
@@ -9185,7 +9240,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R1" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="100K" value="100k"/>
 <part name="R2" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="100K" value="100k"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U2" library="bschulz" deviceset="MIC209*" device="" technology="1" value="MIC2091"/>
+<part name="U2" library="bschulz" deviceset="MIC2005" device="" value="MIC2005"/>
 <part name="C6" library="bschulz_passives" deviceset="C-EU" device="C0805" technology="10UF" value="10uF"/>
 <part name="C7" library="bschulz_passives" deviceset="C-EU" device="C0805" technology="10UF" value="10uF"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
