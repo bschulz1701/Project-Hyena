@@ -22,7 +22,7 @@ for T > 1000s, A = 0.3177, B = -135.2571, C = 34522.4680 (See [Datasheet](http:/
 When the external switch is triggered with the Soil Moisture Symbiont connected, the inrush current on the soil moisture symbiont exceeds the current limit (100mA) on the load switch (MIC2091) for a long enough time to cause the fault detection to trip and disconnect the output. This results in a locked up state, since on each re-try the same overload occurs. 
 
 Here we see the scope capture of the power on of the soil moisture symbiont when powered by a bench supply (current limit > max draw of soil moisture symbiont)
-![Power Supply Test](TestingCaptures/TEK0000.jpg)
+![Power Supply Test](https://github.umn.edu/gemsiot/Project-Hyena/blob/master/Testing/TestingCaptures/TEK0000.JPG)
 
 Yellow -> V<sub>Supply</sub>
 
@@ -38,7 +38,7 @@ Blue -> I<sub>Supply</sub> (10V/A)
 
 Switched the load switch to the MIC2005A load switch (identical pinout), which has a 500mA current limit, but otherwise the same functionality as the previous switch. The test of the system with this switch are seen below
 
-![MIC2005A Test](TestingCaptures/TEK0004.jpg)
+![MIC2005A Test](https://github.umn.edu/gemsiot/Project-Hyena/blob/master/Testing/TestingCaptures/TEK0004.JPG)
 
 Yellow -> V<sub>Supply</sub>
 
