@@ -1,5 +1,22 @@
 # Hardware Overview - Project Hyena
 
+## Files
+
+* [Legacy](Legacy/) - File storage for older hardware versions  
+* PrimaryLogger.sch - Eagle Schematic
+* PrimaryLogger.brd - Eagle Board File
+* [PrimaryLogger_BoM.csv](PrimaryLogger_BoM.csv) - BoM
+* [PrimaryLogger.pdf](PrimaryLogger_0v2.pdf) - PDF of Schematic 
+
+## I2C Addresses 
+
+| Device | Address | 
+| ------ | ------- | 
+| MCP23008 | 0x20 | 
+| TCS3400 | 0x39 |
+| MCP7940 | 0x6F |
+| SHTC3 | 0x70 |
+
 ## Pinout
 
 | Particle Pin | Hyena Pin Name | Control | Function | 
