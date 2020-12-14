@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -55,7 +55,7 @@
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
@@ -95,7 +95,10 @@
 <layer number="114" name="Badge_Outline" color="7" fill="1" visible="no" active="yes"/>
 <layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="no" active="yes"/>
 <layer number="116" name="Patch_BOT" color="7" fill="1" visible="no" active="yes"/>
+<layer number="117" name="PM_Ref" color="7" fill="1" visible="no" active="no"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="yes"/>
+<layer number="119" name="PF_Ref" color="7" fill="1" visible="no" active="no"/>
+<layer number="120" name="WFL_Ref" color="7" fill="1" visible="no" active="no"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
@@ -292,6 +295,14 @@ UMN/GEMS</text>
 <text x="28.321" y="37.211" size="0.6096" layer="52" font="vector" ratio="15" rot="MR0" align="center">SDA</text>
 <text x="28.321" y="38.862" size="0.6096" layer="52" font="vector" ratio="15" rot="MR0" align="center">GPIO</text>
 <text x="28.321" y="40.513" size="0.6096" layer="52" font="vector" ratio="15" rot="MR0" align="center">SCL</text>
+<dimension x1="4.3915" y1="67.056" x2="2" y2="77.14" x3="-7.62" y3="72.098" textsize="0.6096" textratio="15" layer="48" dtype="vertical"/>
+<dimension x1="4.3915" y1="67.056" x2="0" y2="74.93" x3="2.19575" y3="82.55" textsize="0.6096" textratio="15" layer="48" dtype="horizontal"/>
+<dimension x1="50.07" y1="77.14" x2="50.07" y2="52.07" x3="62.23" y3="64.605" textsize="0.6096" textratio="15" layer="48" dtype="vertical"/>
+<dimension x1="38.1" y1="50.07" x2="54.229" y2="60.198" x3="46.1645" y3="47.625" textsize="0.6096" textratio="15" layer="48" dtype="horizontal"/>
+<dimension x1="34.544" y1="3.556" x2="34.417" y2="0" x3="42.418" y3="1.778" textsize="0.6096" textratio="15" layer="48" dtype="vertical"/>
+<dimension x1="34.544" y1="3.556" x2="38.1" y2="3.556" x3="36.322" y3="-3.429" textsize="0.6096" textratio="15" layer="48" dtype="vertical"/>
+<dimension x1="38.1" y1="2" x2="0" y2="2.54" x3="19.05" y3="-8.509" textsize="0.6096" textratio="15" layer="48" dtype="horizontal"/>
+<dimension x1="0" y1="75.14" x2="52.07" y2="75.14" x3="26.035" y3="90.678" textsize="0.6096" textratio="15" layer="48" dtype="horizontal"/>
 </plain>
 <libraries>
 <library name="bschulz">
@@ -760,7 +771,69 @@ Soure: &lt;a href="http://www.ti.com/lit/ds/symlink/ads7042.pdf"&gt; Data sheet 
 <wire x1="-0.8" y1="-0.69" x2="0.8" y2="-0.69" width="0.127" layer="21"/>
 <smd name="1" x="0" y="0" dx="1.6" dy="0.8" layer="1" roundness="20"/>
 </package>
+<package name="SMT-JUMPER_3_1-NC_PASTE_SILK" urn="urn:adsk.eagle:footprint:39276/1">
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="1.27" y1="-1.016" x2="-1.27" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="1.016" x2="1.524" y2="0.762" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.524" y1="0.762" x2="-1.27" y2="1.016" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.524" y1="-0.762" x2="-1.27" y2="-1.016" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.27" y1="-1.016" x2="1.524" y2="-0.762" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.524" y1="-0.762" x2="1.524" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-1.524" y1="-0.762" x2="-1.524" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="1.016" x2="1.27" y2="1.016" width="0.1524" layer="21"/>
+<rectangle x1="-0.4064" y1="-1.1176" x2="1.651" y2="1.1176" layer="31"/>
+<smd name="1" x="-0.8128" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="3" x="0.8128" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+</package>
+<package name="SMT-JUMPER_2_NC_PASTE_SILK" urn="urn:adsk.eagle:footprint:39261/1">
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="0.8636" y1="-1.016" x2="-0.8636" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="0.8636" y1="1.016" x2="1.1176" y2="0.762" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.1176" y1="0.762" x2="-0.8636" y2="1.016" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.1176" y1="-0.762" x2="-0.8636" y2="-1.016" width="0.1524" layer="21" curve="90"/>
+<wire x1="0.8636" y1="-1.016" x2="1.1176" y2="-0.762" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.1176" y1="-0.762" x2="1.1176" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-1.1176" y1="-0.762" x2="-1.1176" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-0.8636" y1="1.016" x2="0.8636" y2="1.016" width="0.1524" layer="21"/>
+<rectangle x1="-1.2446" y1="-1.1176" x2="1.2446" y2="1.1176" layer="31"/>
+<smd name="1" x="-0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+</package>
+<package name="SMT-JUMPER_2_NO_SILK" urn="urn:adsk.eagle:footprint:39254/1">
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="0.8636" y1="-1.016" x2="-0.8636" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="0.8636" y1="1.016" x2="1.1176" y2="0.762" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.1176" y1="0.762" x2="-0.8636" y2="1.016" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.1176" y1="-0.762" x2="-0.8636" y2="-1.016" width="0.1524" layer="21" curve="90"/>
+<wire x1="0.8636" y1="-1.016" x2="1.1176" y2="-0.762" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.1176" y1="-0.762" x2="1.1176" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-1.1176" y1="-0.762" x2="-1.1176" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-0.8636" y1="1.016" x2="0.8636" y2="1.016" width="0.1524" layer="21"/>
+<smd name="1" x="-0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+</package>
 </packages>
+<packages3d>
+<package3d name="SMT-JUMPER_3_1-NC_PASTE_SILK" urn="urn:adsk.eagle:package:39293/1" type="box">
+<packageinstances>
+<packageinstance name="SMT-JUMPER_3_1-NC_PASTE_SILK"/>
+</packageinstances>
+</package3d>
+<package3d name="SMT-JUMPER_2_NC_PASTE_SILK" urn="urn:adsk.eagle:package:39282/1" type="box">
+<packageinstances>
+<packageinstance name="SMT-JUMPER_2_NC_PASTE_SILK"/>
+</packageinstances>
+</package3d>
+<package3d name="SMT-JUMPER_2_NO_SILK" urn="urn:adsk.eagle:package:39279/1" type="box">
+<packageinstances>
+<packageinstance name="SMT-JUMPER_2_NO_SILK"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="bschulz_passives">
 <packages>
@@ -829,85 +902,6 @@ Soure: &lt;a href="http://www.ti.com/lit/ds/symlink/ads7042.pdf"&gt; Data sheet 
 <rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
 </package>
 </packages>
-</library>
-<library name="SparkFun-Jumpers" urn="urn:adsk.eagle:library:528">
-<description>&lt;h3&gt;SparkFun Jumpers&lt;/h3&gt;
-In this library you'll find jumpers, or other semipermanent means of changing current paths. The least permanent form is the solder jumper. These can be changed by adding, removing, or moving solder. In cases that are less likely to be changed we have jumpers that are connected with traces. These can be cut with a razor, or reconnected with solder. Reference designator JP.
-&lt;br&gt;
-&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
-&lt;br&gt;
-&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
-&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;
-&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="SMT-JUMPER_3_1-NC_PASTE_SILK" urn="urn:adsk.eagle:footprint:39276/1" library_version="1">
-<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
-<wire x1="1.27" y1="-1.016" x2="-1.27" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="1.016" x2="1.524" y2="0.762" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-1.524" y1="0.762" x2="-1.27" y2="1.016" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-1.524" y1="-0.762" x2="-1.27" y2="-1.016" width="0.1524" layer="21" curve="90"/>
-<wire x1="1.27" y1="-1.016" x2="1.524" y2="-0.762" width="0.1524" layer="21" curve="90"/>
-<wire x1="1.524" y1="-0.762" x2="1.524" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-1.524" y1="-0.762" x2="-1.524" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="1.016" x2="1.27" y2="1.016" width="0.1524" layer="21"/>
-<rectangle x1="-0.4064" y1="-1.1176" x2="1.651" y2="1.1176" layer="31"/>
-<smd name="1" x="-0.8128" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<smd name="2" x="0" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<smd name="3" x="0.8128" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-</package>
-<package name="SMT-JUMPER_2_NO_SILK" urn="urn:adsk.eagle:footprint:39254/1" library_version="1">
-<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
-<wire x1="0.8636" y1="-1.016" x2="-0.8636" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="0.8636" y1="1.016" x2="1.1176" y2="0.762" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-1.1176" y1="0.762" x2="-0.8636" y2="1.016" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-1.1176" y1="-0.762" x2="-0.8636" y2="-1.016" width="0.1524" layer="21" curve="90"/>
-<wire x1="0.8636" y1="-1.016" x2="1.1176" y2="-0.762" width="0.1524" layer="21" curve="90"/>
-<wire x1="1.1176" y1="-0.762" x2="1.1176" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-1.1176" y1="-0.762" x2="-1.1176" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-0.8636" y1="1.016" x2="0.8636" y2="1.016" width="0.1524" layer="21"/>
-<smd name="1" x="-0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<smd name="2" x="0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-</package>
-<package name="SMT-JUMPER_2_NC_PASTE_SILK" urn="urn:adsk.eagle:footprint:39261/1" library_version="1">
-<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
-<wire x1="0.8636" y1="-1.016" x2="-0.8636" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="0.8636" y1="1.016" x2="1.1176" y2="0.762" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-1.1176" y1="0.762" x2="-0.8636" y2="1.016" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-1.1176" y1="-0.762" x2="-0.8636" y2="-1.016" width="0.1524" layer="21" curve="90"/>
-<wire x1="0.8636" y1="-1.016" x2="1.1176" y2="-0.762" width="0.1524" layer="21" curve="90"/>
-<wire x1="1.1176" y1="-0.762" x2="1.1176" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-1.1176" y1="-0.762" x2="-1.1176" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-0.8636" y1="1.016" x2="0.8636" y2="1.016" width="0.1524" layer="21"/>
-<rectangle x1="-1.2446" y1="-1.1176" x2="1.2446" y2="1.1176" layer="31"/>
-<smd name="1" x="-0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<smd name="2" x="0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="SMT-JUMPER_3_1-NC_PASTE_SILK" urn="urn:adsk.eagle:package:39293/1" type="box" library_version="1">
-<packageinstances>
-<packageinstance name="SMT-JUMPER_3_1-NC_PASTE_SILK"/>
-</packageinstances>
-</package3d>
-<package3d name="SMT-JUMPER_2_NO_SILK" urn="urn:adsk.eagle:package:39279/1" type="box" library_version="1">
-<packageinstances>
-<packageinstance name="SMT-JUMPER_2_NO_SILK"/>
-</packageinstances>
-</package3d>
-<package3d name="SMT-JUMPER_2_NC_PASTE_SILK" urn="urn:adsk.eagle:package:39282/1" type="box" library_version="1">
-<packageinstances>
-<packageinstance name="SMT-JUMPER_2_NC_PASTE_SILK"/>
-</packageinstances>
-</package3d>
-</packages3d>
 </library>
 </libraries>
 <attributes>
@@ -1296,22 +1290,40 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="MPN" value="Abracon" x="29.21" y="-44.45" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="11.557" y="22.098" size="0.6096" layer="25" font="vector" ratio="15" rot="R90" align="center"/>
 </element>
-<element name="JP1" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="51.181" smashed="yes" rot="MR90">
+<element name="JP1" library="bschulz" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="51.181" smashed="yes" rot="MR90">
+<attribute name="DIGIKEY" value="DNP" x="30.48" y="51.181" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MF" value="N/A" x="30.48" y="51.181" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="N/A" x="30.48" y="51.181" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="31.623" y="51.181" size="0.6096" layer="26" font="vector" ratio="20" rot="MR90" align="bottom-center"/>
 </element>
-<element name="JP2" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="47.879" smashed="yes" rot="MR90">
+<element name="JP2" library="bschulz" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="47.879" smashed="yes" rot="MR90">
+<attribute name="DIGIKEY" value="DNP" x="30.48" y="47.879" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MF" value="N/A" x="30.48" y="47.879" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="N/A" x="30.48" y="47.879" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="31.623" y="47.879" size="0.6096" layer="26" font="vector" ratio="20" rot="MR90" align="bottom-center"/>
 </element>
-<element name="JP3" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="39.751" smashed="yes" rot="MR90">
+<element name="JP3" library="bschulz" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="39.751" smashed="yes" rot="MR90">
+<attribute name="DIGIKEY" value="DNP" x="30.48" y="39.751" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MF" value="N/A" x="30.48" y="39.751" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="N/A" x="30.48" y="39.751" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="31.623" y="39.751" size="0.6096" layer="26" font="vector" ratio="20" rot="MR90" align="bottom-center"/>
 </element>
-<element name="JP4" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="36.449" smashed="yes" rot="MR90">
+<element name="JP4" library="bschulz" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="36.449" smashed="yes" rot="MR90">
+<attribute name="DIGIKEY" value="DNP" x="30.48" y="36.449" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MF" value="N/A" x="30.48" y="36.449" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="N/A" x="30.48" y="36.449" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="31.623" y="36.449" size="0.6096" layer="26" font="vector" ratio="20" rot="MR90" align="bottom-center"/>
 </element>
-<element name="JP5" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="28.321" smashed="yes" rot="MR90">
+<element name="JP5" library="bschulz" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="28.321" smashed="yes" rot="MR90">
+<attribute name="DIGIKEY" value="DNP" x="30.48" y="28.321" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MF" value="N/A" x="30.48" y="28.321" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="N/A" x="30.48" y="28.321" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="31.623" y="28.321" size="0.6096" layer="26" font="vector" ratio="20" rot="MR90" align="bottom-center"/>
 </element>
-<element name="JP6" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="25.019" smashed="yes" rot="MR90">
+<element name="JP6" library="bschulz" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="25.019" smashed="yes" rot="MR90">
+<attribute name="DIGIKEY" value="DNP" x="30.48" y="25.019" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MF" value="N/A" x="30.48" y="25.019" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="N/A" x="30.48" y="25.019" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="31.623" y="25.019" size="0.6096" layer="26" font="vector" ratio="20" rot="MR90" align="bottom-center"/>
 </element>
 <element name="U5" library="bschulz" package="DCK_R-PDSO-G6" value="SN74LVC1G3157SC70" x="7.62" y="59.69" smashed="yes" rot="R180">
@@ -1378,7 +1390,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="NAME" x="16.51" y="7.366" size="0.6096" layer="25" font="vector" ratio="20"/>
 <attribute name="VALUE" x="16.51" y="-0.254" size="0.6096" layer="27" font="vector" ratio="20"/>
 </element>
-<element name="R8" library="bschulz_passives" package="R0603" value="100k" x="20.701" y="9.525" smashed="yes" rot="R180">
+<element name="R8" library="bschulz_passives" package="R0603" value="10k" x="20.701" y="9.525" smashed="yes" rot="R180">
 <attribute name="DIGIKEY" value="311-10.0KHRCT-ND" x="20.701" y="9.525" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="Yageo" x="20.701" y="9.525" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="RC0603FR-0710KL" x="20.701" y="9.525" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1529,7 +1541,10 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="NAME" x="22.225" y="62.357" size="0.6096" layer="25" font="vector" ratio="15" align="center"/>
 <attribute name="VALUE" x="22.098" y="58.928" size="0.6096" layer="27" font="vector" ratio="15" align="center"/>
 </element>
-<element name="JP7" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_2_NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39282/1" value="JUMPER-SMT_2_NC_PASTE_SILK" x="19.431" y="61.341" smashed="yes" rot="R180">
+<element name="JP7" library="bschulz" package="SMT-JUMPER_2_NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39282/1" value="JUMPER-SMT_2_NC_PASTE_SILK" x="19.431" y="61.341" smashed="yes" rot="R180">
+<attribute name="DIGIKEY" value="DNP" x="19.431" y="61.341" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="N/A" x="19.431" y="61.341" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="N/A" x="19.431" y="61.341" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="19.812" y="62.484" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 </element>
 <element name="R9" library="bschulz_passives" package="R0603" value="100k" x="13.716" y="31.496" smashed="yes" rot="R180">
@@ -1540,7 +1555,10 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="13.716" y="32.893" size="0.6096" layer="27" font="vector" ratio="15" rot="R180" align="center"/>
 <attribute name="VALUE_PART" value="100k" x="13.716" y="31.496" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="JP8" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="44.577" smashed="yes" rot="MR270">
+<element name="JP8" library="bschulz" package="SMT-JUMPER_3_1-NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39293/1" value="JUMPER-SMT_3_1-NC_PASTE_SILK" x="30.48" y="44.577" smashed="yes" rot="MR270">
+<attribute name="DIGIKEY" value="DNP" x="30.48" y="44.577" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="N/A" x="30.48" y="44.577" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="N/A" x="30.48" y="44.577" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="NAME" x="31.623" y="44.577" size="0.6096" layer="26" font="vector" ratio="20" rot="MR90" align="bottom-center"/>
 </element>
 <element name="R11" library="bschulz_passives" package="R0603" value="100k" x="25.908" y="51.816" smashed="yes">
@@ -1551,11 +1569,17 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="25.908" y="50.419" size="0.6096" layer="27" font="vector" ratio="15" align="center"/>
 <attribute name="VALUE_PART" value="100k" x="25.908" y="51.816" size="1.778" layer="27" display="off"/>
 </element>
-<element name="JP9" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_2_NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39282/1" value="JUMPER-SMT_2_NC_PASTE_SILK" x="27.051" y="52.197" smashed="yes" rot="MR180">
+<element name="JP9" library="bschulz" package="SMT-JUMPER_2_NC_PASTE_SILK" package3d_urn="urn:adsk.eagle:package:39282/1" value="JUMPER-SMT_2_NC_PASTE_SILK" x="27.051" y="52.197" smashed="yes" rot="MR180">
+<attribute name="DIGIKEY" value="DNP" x="27.051" y="52.197" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="MF" value="N/A" x="27.051" y="52.197" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="MPN" value="N/A" x="27.051" y="52.197" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="NAME" x="27.051" y="51.054" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
 <attribute name="VALUE" x="27.051" y="53.34" size="0.6096" layer="28" font="vector" ratio="20" rot="MR180" align="top-center"/>
 </element>
-<element name="JP10" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_2_NO_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK" x="2.667" y="59.309" smashed="yes" rot="R270">
+<element name="JP10" library="bschulz" package="SMT-JUMPER_2_NO_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK" x="2.667" y="59.309" smashed="yes" rot="R270">
+<attribute name="DIGIKEY" value="DNP" x="2.667" y="59.309" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="N/A" x="2.667" y="59.309" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="N/A" x="2.667" y="59.309" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="2.667" y="58.039" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
 </element>
 </elements>
@@ -2756,11 +2780,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <note version="6.3" minversion="6.2.2" severity="warning">
 Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
-</note>
-<note version="8.2" severity="warning">
-Since Version 8.2, EAGLE supports online libraries. The ids
-of those online libraries will not be understood (or retained)
-with this version.
 </note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library
