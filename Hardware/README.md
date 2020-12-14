@@ -5,7 +5,7 @@
 * [Legacy](Legacy/) - File storage for older hardware versions  
 * PrimaryLogger.sch - Eagle Schematic
 * PrimaryLogger.brd - Eagle Board File
-* [PrimaryLogger_BoM.csv](PrimaryLogger_BoM.csv) - BoM
+* [PrimaryLogger_BoM.csv](PrimaryLogger_BoM.csv) - BoM (For reference only, see [Production](../Production) for production ready BoM)
 * [PrimaryLogger.pdf](PrimaryLogger_0v2.pdf) - PDF of Schematic 
 
 ## I2C Addresses 
