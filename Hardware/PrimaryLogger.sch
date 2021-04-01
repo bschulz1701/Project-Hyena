@@ -9585,6 +9585,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R11" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="100K" value="100k"/>
 <part name="JP9" library="bschulz" deviceset="JUMPER-SMT_2_NC_PASTE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39282/1"/>
 <part name="JP10" library="bschulz" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1"/>
+<part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10120,8 +10121,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="3V3_SD_EN" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="EN"/>
-<wire x1="198.12" y1="152.4" x2="193.04" y2="152.4" width="0.1524" layer="91"/>
-<label x="193.04" y="152.4" size="0.6096" layer="95" rot="R180" xref="yes"/>
+<wire x1="198.12" y1="152.4" x2="195.58" y2="152.4" width="0.1524" layer="91"/>
+<label x="195.58" y="152.4" size="0.6096" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
@@ -10158,8 +10159,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="3V3_EXT_EN" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="EN"/>
-<wire x1="198.12" y1="177.8" x2="193.04" y2="177.8" width="0.1524" layer="91"/>
-<label x="193.04" y="177.8" size="0.6096" layer="95" rot="R180" xref="yes"/>
+<wire x1="198.12" y1="177.8" x2="195.58" y2="177.8" width="0.1524" layer="91"/>
+<label x="195.58" y="177.8" size="0.6096" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -10273,7 +10274,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <plain>
 <text x="109.22" y="20.32" size="0.6096" layer="91" align="top-left">Note:
 Must be 3v3, NOT 3V3_EXT, since tips are asynchronous</text>
-<text x="10.16" y="86.36" size="2.54" layer="91">Remove for production!</text>
+<text x="5.08" y="86.36" size="2.54" layer="91">DNP for production</text>
 <text x="66.04" y="180.34" size="1.778" layer="91">Flex - A</text>
 <text x="66.04" y="177.8" size="1.778" layer="91">Flex - A</text>
 <text x="66.04" y="175.26" size="1.778" layer="91">Flex - A</text>
@@ -10464,6 +10465,9 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <instance part="JP10" gate="G$1" x="144.78" y="66.04" smashed="yes" rot="R180">
 <attribute name="NAME" x="147.32" y="63.5" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
+<instance part="GND24" gate="1" x="104.14" y="7.62" smashed="yes">
+<attribute name="VALUE" x="101.6" y="5.08" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10492,7 +10496,8 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <segment>
 <pinref part="J6" gate="G$1" pin="2"/>
 <wire x1="109.22" y1="12.7" x2="104.14" y2="12.7" width="0.1524" layer="91"/>
-<label x="101.6" y="12.7" size="1.778" layer="95"/>
+<pinref part="GND24" gate="1" pin="GND"/>
+<wire x1="104.14" y1="10.16" x2="104.14" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="3"/>
@@ -10622,8 +10627,8 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="104.14" y1="25.4" x2="104.14" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="27.94" x2="99.06" y2="27.94" width="0.1524" layer="91"/>
-<label x="99.06" y="27.94" size="1.778" layer="95"/>
+<wire x1="104.14" y1="27.94" x2="101.6" y2="27.94" width="0.1524" layer="91"/>
+<label x="101.6" y="27.94" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="MS1" gate="G$1" pin="3V"/>
@@ -10993,10 +10998,10 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <segment>
 <pinref part="J6" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="15.24" x2="104.14" y2="15.24" width="0.1524" layer="91"/>
-<label x="99.06" y="15.24" size="1.778" layer="95"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="104.14" y1="15.24" x2="99.06" y2="15.24" width="0.1524" layer="91"/>
 <junction x="104.14" y="15.24"/>
+<label x="99.06" y="15.24" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="TP8" gate="G$1" pin="P$1"/>
