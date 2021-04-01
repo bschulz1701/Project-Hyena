@@ -5,9 +5,9 @@ This folder contains files used to have the hardware manufactured
 
 #### Version v0.2 - Release Version
 
-* [Geber](PrimaryLogger_2020-06-23_x274.zip)
-* [Top Mount](PrimaryLogger_v2.mnt)
-* [BoM](AdvancedCircuitsQuote_BoM_2020-09-17.csv)
+* [Geber](0v2_Release/PrimaryLogger_2020-09-17_x274.zip)
+* [Top Mount](0v2_Release/PrimaryLogger_v2.mnt)
+* [BoM](0v2_Release/PrimaryLogger_v2_BoM.csv)
 
 ### File Conventions 
 * `HardwareName.mnb` - These are mount files (pick and place) for the bottom of the board
