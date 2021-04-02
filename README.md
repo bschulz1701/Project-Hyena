@@ -1,7 +1,7 @@
 # Project-Hyena
 Daughterboard for use with Feather form factor controller, designed to interface with multiple, flexible, low cost sensors at the core of a low cost meteorological sensing system. 
 
-# Repo Roadmap
+# Repo Outline
 #### [Documents](Documents/) 
 
 General document and image storage for repo and README
