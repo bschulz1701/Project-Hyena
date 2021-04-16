@@ -2038,20 +2038,21 @@ Source: http://focus.ti.com/lit/ds/slcs146e/slcs146e.pdf</description>
 </package3d>
 </packages3d>
 <symbols>
-<symbol name="MCP7940">
-<pin name="SDA" x="-10.16" y="5.08" length="middle"/>
-<pin name="SCL" x="-10.16" y="2.54" length="middle"/>
-<pin name="MFP" x="-10.16" y="0" length="middle"/>
-<pin name="VCC" x="-10.16" y="-5.08" length="middle"/>
-<pin name="VSS" x="-10.16" y="-7.62" length="middle"/>
-<pin name="X1" x="15.24" y="5.08" length="middle" rot="R180"/>
-<pin name="X2" x="15.24" y="0" length="middle" rot="R180"/>
-<pin name="VBAT" x="15.24" y="-7.62" length="middle" rot="R180"/>
-<wire x1="-5.08" y1="7.62" x2="-5.08" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-10.16" x2="10.16" y2="7.62" width="0.254" layer="94"/>
-<wire x1="10.16" y1="7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
-<text x="2.54" y="9.398" size="1.778" layer="95" align="center">MCP7940</text>
+<symbol name="MCP794XX">
+<pin name="SDA" x="-12.7" y="5.08" length="middle"/>
+<pin name="SCL" x="-12.7" y="2.54" length="middle" direction="in"/>
+<pin name="MFP" x="-12.7" y="0" length="middle"/>
+<pin name="VCC" x="-12.7" y="-5.08" length="middle" direction="pwr"/>
+<pin name="VSS" x="-12.7" y="-7.62" length="middle" direction="pwr"/>
+<pin name="X1" x="12.7" y="5.08" length="middle" direction="pas" rot="R180"/>
+<pin name="X2" x="12.7" y="0" length="middle" direction="pas" rot="R180"/>
+<pin name="VBAT" x="12.7" y="-7.62" length="middle" direction="pwr" rot="R180"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<text x="0" y="9.398" size="1.778" layer="95" align="center">&gt;DISP</text>
+<text x="0" y="-11.684" size="1.778" layer="95" ratio="15" align="center">&gt;NAME</text>
 </symbol>
 <symbol name="CRYSTAL_SF">
 <description>&lt;h3&gt;Crystal (no ground pin)&lt;/h3&gt;</description>
@@ -2477,7 +2478,8 @@ http://creativecommons.org/licenses/by-sa/4.0/</text>
 <wire x1="-5.08" y1="-5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
-<text x="-5.08" y="6.096" size="1.27" layer="95">MIC842</text>
+<text x="2.54" y="6.35" size="1.27" layer="95" align="center">MIC842</text>
+<text x="2.54" y="-6.604" size="1.27" layer="95" ratio="15" align="center">&gt;NAME</text>
 </symbol>
 <symbol name="LED">
 <wire x1="1.27" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
@@ -2530,20 +2532,24 @@ http://creativecommons.org/licenses/by-sa/4.0/</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MCP7940" prefix="U">
-<description>&lt;b&gt;MCP7940&lt;/b&gt; - RTC
+<deviceset name="MCP794*" prefix="U">
+<description>&lt;b&gt;MCP794xx&lt;/b&gt; - Battery Backed I2C Real Time Clock (RTC) with SRAM (EEPROM*) and Protected EERPOM
  
 &lt;p&gt;Characteristics:
 &lt;ul&gt;
 &lt;li&gt;VCC: 1.8~5.5V&lt;/li&gt;
 &lt;li&gt;VBat: 1.3~5.5V&lt;/li&gt;
-&lt;li&gt;Memory: 64B&lt;/li&gt;
+&lt;li&gt;I&lt;sub&gt;Q&lt;/sub&gt;: 1.2&amp;mu;A @ 3.3V Vcc, 925nA @ 3.0V VBat &lt;/li&gt;
+&lt;li&gt;Memory: 64B, 64B Protected EEPROM, 1kB EEPROM*&lt;/li&gt;
 &lt;li&gt;Interface: I2C&lt;/li&gt;
 &lt;li&gt;Operating Temperature: -40°C to 85°C&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
+
+*Only on MCP7941x models
  
-&lt;p&gt;Digikey: &lt;a href = "https://www.digikey.com/scripts/DkSearch/dksus.dll?Detail&amp;itemSeq=257151033&amp;uq=636590618847128166"&gt; MCP7940N-I/SN-ND &lt;/a&gt;&lt;br/&gt;
+&lt;p&gt;Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/en/products/detail/microchip-technology/MCP79411T-I-SN/2533083"&gt; MCP79411, SOIC (MCP79411T-I/SNCT-ND) &lt;/a&gt;&lt;br/&gt;
+&lt;a href = "https://www.digikey.com/en/products/detail/microchip-technology/MCP79412-I-SN/2712450"&gt; MCP79412, SOIC (MCP79412-I/SN-ND) &lt;/a&gt;&lt;br/&gt;
 &lt;a href = "https://www.digikey.com/products/en/integrated-circuits-ics/clock-timing-real-time-clocks/690?FV=401994%2C26802e4%2C45003ef%2C450041e%2C4500072%2C450050c%2C4500565%2C450057c%2C450057e%2C4500010%2C4500011%2C4500017%2C450017d%2C4500180%2C450004f%2C1f140000%2Cffe002b2%2C16980015%2C1698001a%2C1698001d%2C16980026%2C16980027%2C16980029%2C16980036%2C16980009&amp;quantity=10&amp;ColumnSort=1000011&amp;page=2&amp;stock=1&amp;nstock=1&amp;pageSize=25"&gt; Pin Compatible Alternatives &lt;/a&gt;
 
 &lt;br/&gt;
@@ -2551,7 +2557,7 @@ http://creativecommons.org/licenses/by-sa/4.0/</text>
 Note: These are recomendations at the time, always verify pin compatability using combination of Mrk1 EyeBall and quality datasheet
 &lt;/p&gt;</description>
 <gates>
-<gate name="G$1" symbol="MCP7940" x="-2.54" y="0"/>
+<gate name="G$1" symbol="MCP794XX" x="0" y="0"/>
 </gates>
 <devices>
 <device name="SOIC" package="SO08">
@@ -2567,9 +2573,46 @@ Note: These are recomendations at the time, always verify pin compatability usin
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DIGIKEY" value="MCP7940N-I/SN-ND" constant="no"/>
+<attribute name="DIGIKEY" value="" constant="no"/>
+<attribute name="DISP" value="MCP794xx" constant="no"/>
 <attribute name="MF" value="Microchip" constant="no"/>
-<attribute name="MPN" value="MCP7940N-I/SN" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+<technology name="00">
+<attribute name="DIGIKEY" value="" constant="no"/>
+<attribute name="DISP" value="MCP79400" constant="no"/>
+<attribute name="MF" value="Microchip" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+<technology name="01">
+<attribute name="DIGIKEY" value="" constant="no"/>
+<attribute name="DISP" value="MCP79401" constant="no"/>
+<attribute name="MF" value="Microchip" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+<technology name="02">
+<attribute name="DIGIKEY" value="" constant="no"/>
+<attribute name="DISP" value="MCP79402" constant="no"/>
+<attribute name="MF" value="Microchip" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+<technology name="10">
+<attribute name="DIGIKEY" value="" constant="no"/>
+<attribute name="DISP" value="MCP79410" constant="no"/>
+<attribute name="MF" value="Microchip" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+<technology name="11">
+<attribute name="DIGIKEY" value="MCP79411T-I/SNCT-ND" constant="no"/>
+<attribute name="DISP" value="MCP79411" constant="no"/>
+<attribute name="MF" value="Microchip" constant="no"/>
+<attribute name="MPN" value="MCP79411T-I/SN" constant="no"/>
+</technology>
+<technology name="12">
+<attribute name="DIGIKEY" value="MCP79412-I/SN-ND" constant="no"/>
+<attribute name="DISP" value="MCP79412" constant="no"/>
+<attribute name="MF" value="Microchip" constant="no"/>
+<attribute name="MPN" value="MCP79412-I/SN" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -8438,6 +8481,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="VALUE_PART" value="" constant="no"/>
 </technology>
+<technology name="0.0">
+<attribute name="DIGIKEY" value="311-0.0LECT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="AC0603JR-070RL" constant="no"/>
+<attribute name="VALUE_PART" value="0" constant="no"/>
+</technology>
 <technology name="1">
 <attribute name="DIGIKEY" value="311-1.00HRCT-ND" constant="no"/>
 <attribute name="MF" value="Yageo" constant="no"/>
@@ -9667,7 +9716,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </class>
 </classes>
 <parts>
-<part name="U1" library="bschulz" deviceset="MCP7940" device="SOIC"/>
+<part name="U1" library="bschulz" deviceset="MCP794*" device="SOIC" technology="12" value="MCP79412SOIC"/>
 <part name="XTAL1" library="bschulz" deviceset="CRYSTAL" device="3.2X1.5">
 <attribute name="DIGIKEY" value="535-11937-1-ND"/>
 <attribute name="MF" value="ABS07-120-32.768KHZ-T"/>
@@ -9731,7 +9780,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J5" library="bschulz" deviceset="CONN_3" device="2.54_SCREW"/>
 <part name="J8" library="bschulz" deviceset="CONN_02" device="2.54_SCREW_ROUND"/>
-<part name="R14" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="10K" value="100k"/>
+<part name="R14" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="10K" value="10k"/>
 <part name="J6" library="bschulz" deviceset="CONN_02" device="3.5MM_ROUND"/>
 <part name="J7" library="bschulz" deviceset="CONN_02" device="3.5MM_ROUND"/>
 <part name="R21" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="100K" value="100k"/>
@@ -9770,7 +9819,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="JP8" library="bschulz" deviceset="JUMPER-SMT_2_NC_PASTE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39282/1"/>
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U6" library="bschulz" deviceset="TPL5010" device="DDC"/>
-<part name="U9" library="bschulz" deviceset="MIC842" device=""/>
+<part name="U9" library="bschulz" deviceset="MIC842" device="" technology="L" value="MIC842L"/>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R9" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="10K" value="10k"/>
@@ -9782,8 +9831,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="GND29" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R11" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="4.7K" value="4.7k"/>
 <part name="R12" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="4.7K" value="4.7k"/>
-<part name="D1" library="bschulz" deviceset="LED" device="0603"/>
-<part name="D2" library="bschulz" deviceset="LED" device="0603"/>
+<part name="D1" library="bschulz" deviceset="LED" device="0603" technology="RED" value="LEDRED0603"/>
+<part name="D2" library="bschulz" deviceset="LED" device="0603" technology="GREEN" value="LEDGREEN0603"/>
 <part name="GND30" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C9" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF" value="0.1uF"/>
 <part name="C10" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF" value="0.1uF"/>
@@ -9795,10 +9844,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="C17" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF" value="0.1uF"/>
 <part name="GND34" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND35" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R19" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="4.7K"/>
-<part name="R20" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="4.7K"/>
-<part name="R23" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="4.7K"/>
-<part name="R24" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="4.7K"/>
+<part name="R19" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="4.7K" value="4.7k"/>
+<part name="R20" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="4.7K" value="4.7k"/>
+<part name="R23" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="4.7K" value="4.7k"/>
+<part name="R24" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="4.7K" value="4.7k"/>
 <part name="U3" library="bschulz" deviceset="MCP23008" device="SSOP"/>
 <part name="GND36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J9" library="bschulz" deviceset="GEMS_POWER_PLUG" device="INPUT"/>
@@ -9806,8 +9855,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="R17" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="1K" value="1k"/>
 <part name="GND37" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND38" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R2" library="bschulz_passives" deviceset="R-EU_" device="R0603" value="0R"/>
-<part name="R16" library="bschulz_passives" deviceset="R-EU_" device="R0603" value="0R"/>
+<part name="R2" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="0.0" value="0R"/>
+<part name="R16" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="0.0" value="0R"/>
 </parts>
 <sheets>
 <sheet>
@@ -9824,7 +9873,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <text x="50.8" y="154.94" size="1.778" layer="91">ADR 0x20</text>
 </plain>
 <instances>
-<instance part="U1" gate="G$1" x="50.8" y="106.68" smashed="yes"/>
+<instance part="U1" gate="G$1" x="54.102" y="106.68" smashed="yes">
+<attribute name="DISP" x="54.102" y="116.078" size="1.778" layer="95" align="center"/>
+<attribute name="NAME" x="54.102" y="94.996" size="1.778" layer="95" ratio="15" align="center"/>
+</instance>
 <instance part="XTAL1" gate="G$1" x="68.58" y="109.22" smashed="yes" rot="R270">
 <attribute name="NAME" x="68.58" y="103.632" size="1.778" layer="95" font="vector" align="bottom-center"/>
 </instance>
@@ -9993,7 +10045,9 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="U6" gate="G$1" x="172.72" y="76.2" smashed="yes">
 <attribute name="NAME" x="172.72" y="67.056" size="1.778" layer="95" ratio="15" align="center"/>
 </instance>
-<instance part="U9" gate="G$1" x="231.14" y="78.74" smashed="yes"/>
+<instance part="U9" gate="G$1" x="231.14" y="78.74" smashed="yes">
+<attribute name="NAME" x="233.68" y="72.136" size="1.27" layer="95" ratio="15" align="center"/>
+</instance>
 <instance part="GND25" gate="1" x="154.94" y="66.04" smashed="yes">
 <attribute name="VALUE" x="152.4" y="63.5" size="1.778" layer="96"/>
 </instance>
@@ -10074,7 +10128,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <segment>
 <pinref part="U1" gate="G$1" pin="X1"/>
 <pinref part="XTAL1" gate="G$1" pin="1"/>
-<wire x1="66.04" y1="111.76" x2="68.58" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="66.802" y1="111.76" x2="68.58" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="68.58" y1="111.76" x2="71.12" y2="111.76" width="0.1524" layer="91"/>
 <junction x="68.58" y="111.76"/>
@@ -10084,7 +10138,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <segment>
 <pinref part="U1" gate="G$1" pin="X2"/>
 <pinref part="XTAL1" gate="G$1" pin="2"/>
-<wire x1="66.04" y1="106.68" x2="68.58" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="66.802" y1="106.68" x2="68.58" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="68.58" y1="106.68" x2="71.12" y2="106.68" width="0.1524" layer="91"/>
 <junction x="68.58" y="106.68"/>
@@ -10111,7 +10165,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VSS"/>
-<wire x1="40.64" y1="99.06" x2="38.1" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="41.402" y1="99.06" x2="38.1" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="99.06" x2="38.1" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 </segment>
@@ -10274,7 +10328,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <net name="SCL" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="SCL"/>
-<wire x1="40.64" y1="109.22" x2="33.02" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="41.402" y1="109.22" x2="33.02" y2="109.22" width="0.1524" layer="91"/>
 <label x="33.02" y="109.22" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -10298,14 +10352,14 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="U1" gate="G$1" pin="MFP"/>
 <label x="27.94" y="106.68" size="1.778" layer="95"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="22.86" y1="106.68" x2="40.64" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="106.68" x2="41.402" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VBAT" class="0">
 <segment>
 <pinref part="BT1" gate="G$1" pin="+"/>
 <pinref part="U1" gate="G$1" pin="VBAT"/>
-<wire x1="71.12" y1="99.06" x2="66.04" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="99.06" x2="66.802" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="99.06" x2="71.12" y2="99.06" width="0.1524" layer="91"/>
 <junction x="71.12" y="99.06"/>
@@ -10320,7 +10374,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VCC"/>
-<wire x1="40.64" y1="101.6" x2="33.02" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="41.402" y1="101.6" x2="33.02" y2="101.6" width="0.1524" layer="91"/>
 <label x="33.02" y="101.6" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -10551,7 +10605,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <net name="SDA_OB" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="SDA"/>
-<wire x1="40.64" y1="111.76" x2="33.02" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="41.402" y1="111.76" x2="33.02" y2="111.76" width="0.1524" layer="91"/>
 <label x="30.48" y="111.76" size="1.778" layer="95"/>
 </segment>
 <segment>
