@@ -1979,21 +1979,23 @@ Source: http://focus.ti.com/lit/ds/slcs146e/slcs146e.pdf</description>
 <text x="0" y="1.651" size="0.6096" layer="21" font="vector" ratio="15" align="center">&gt;NAME</text>
 <text x="0" y="-1.651" size="0.6096" layer="21" font="vector" ratio="15" align="center">&gt;VALUE</text>
 </package>
-<package name="TTSOP_8">
-<smd name="1" x="-2.95" y="0.975" dx="0.45" dy="1.45" layer="1" rot="R90"/>
-<smd name="2" x="-2.95" y="0.325" dx="0.45" dy="1.45" layer="1" rot="R90"/>
-<smd name="3" x="-2.95" y="-0.325" dx="0.45" dy="1.45" layer="1" rot="R90"/>
-<smd name="4" x="-2.95" y="-0.975" dx="0.45" dy="1.45" layer="1" rot="R90"/>
-<smd name="5" x="2.95" y="-0.975" dx="0.45" dy="1.45" layer="1" rot="R270"/>
-<smd name="6" x="2.95" y="-0.325" dx="0.45" dy="1.45" layer="1" rot="R270"/>
-<smd name="7" x="2.95" y="0.325" dx="0.45" dy="1.45" layer="1" rot="R270"/>
-<smd name="8" x="2.95" y="0.975" dx="0.45" dy="1.45" layer="1" rot="R270"/>
-<wire x1="-2.2" y1="1.5" x2="-2.2" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="-2.2" y1="-1.5" x2="2.2" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="2.2" y1="-1.5" x2="2.2" y2="1.5" width="0.127" layer="21"/>
-<wire x1="-2.2" y1="1.5" x2="2.2" y2="1.5" width="0.127" layer="21"/>
-<circle x="-2.413" y="1.778" radius="0.127" width="0.127" layer="21"/>
-<text x="0" y="-2.032" size="0.6096" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
+<package name="TSSOP_8">
+<description>&lt;b&gt;TSSOP8 (SOT505-1)&lt;/b&gt;&lt;br&gt;
+&lt;a href = "https://www.nxp.com/docs/en/data-sheet/PCA9617A.pdf"&gt;Datasheet&lt;/a&gt;</description>
+<smd name="1" x="-1.05" y="-2.375" dx="0.6" dy="1.15" layer="1"/>
+<smd name="4" x="1.05" y="-2.375" dx="0.6" dy="1.15" layer="1"/>
+<smd name="2" x="-0.325" y="-2.375" dx="0.45" dy="1.15" layer="1"/>
+<smd name="3" x="0.325" y="-2.375" dx="0.45" dy="1.15" layer="1"/>
+<smd name="5" x="1.05" y="2.375" dx="0.6" dy="1.15" layer="1" rot="R180"/>
+<smd name="8" x="-1.05" y="2.375" dx="0.6" dy="1.15" layer="1" rot="R180"/>
+<smd name="6" x="0.325" y="2.375" dx="0.45" dy="1.15" layer="1" rot="R180"/>
+<smd name="7" x="-0.325" y="2.375" dx="0.45" dy="1.15" layer="1" rot="R180"/>
+<wire x1="-1.5" y1="1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="1.5" y2="1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="1.5" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
+<circle x="-1.016" y="-1.016" radius="0.179603125" width="0.127" layer="21"/>
+<text x="-2.032" y="0" size="0.6096" layer="25" font="vector" ratio="15" rot="R90" align="center">&gt;NAME</text>
 </package>
 <package name="2X3_MICROFIT_RT">
 <description>&lt;b&gt;Molex Micro-Fit, 6 pos, Right Angle&lt;/b&gt;&lt;br&gt;&lt;a href = https://www.molex.com/pdm_docs/sd/430450600_sd.pdf&gt;Datasheet&lt;/a&gt;</description>
@@ -4188,7 +4190,7 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/product-detail/en/texas
 <gate name="G$1" symbol="PCA9617" x="0" y="0"/>
 </gates>
 <devices>
-<device name="TSSOP8" package="TTSOP_8">
+<device name="" package="TSSOP_8">
 <connects>
 <connect gate="G$1" pin="EN" pad="5"/>
 <connect gate="G$1" pin="GND" pad="4"/>
@@ -4201,7 +4203,7 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/product-detail/en/texas
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DIGIKEY" value="568-10211-2-ND" constant="no"/>
+<attribute name="DIGIKEY" value="568-10211-1-ND" constant="no"/>
 <attribute name="MF" value="NXP" constant="no"/>
 <attribute name="MPN" value="PCA9617ADPJ" constant="no"/>
 </technology>
@@ -9804,12 +9806,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="FRAME1" library="bschulz" deviceset="FRAME_A_L" device="">
 <attribute name="DESIGNER" value="Bobby Schulz"/>
 <attribute name="PROJECT" value="Hyena"/>
-<attribute name="REV" value="0.2"/>
+<attribute name="REV" value="0.4"/>
 </part>
 <part name="FRAME2" library="bschulz" deviceset="FRAME_A_L" device="">
 <attribute name="DESIGNER" value="Bobby Schulz"/>
 <attribute name="PROJECT" value="Hyena"/>
-<attribute name="REV" value="0.2"/>
+<attribute name="REV" value="0.4"/>
 </part>
 <part name="C1" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF" value="0.1uF"/>
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9838,7 +9840,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="C10" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF" value="0.1uF"/>
 <part name="GND31" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND32" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U10" library="bschulz" deviceset="PCA9617" device="TSSOP8"/>
+<part name="U10" library="bschulz" deviceset="PCA9617" device=""/>
 <part name="GND33" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C16" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF" value="0.1uF"/>
 <part name="C17" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF" value="0.1uF"/>
@@ -9856,7 +9858,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="GND37" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND38" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R2" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="0.0" value="0R"/>
-<part name="R16" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="0.0" value="0R"/>
+<part name="R16" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="0.0" value="DNP"/>
 </parts>
 <sheets>
 <sheet>
@@ -11195,11 +11197,6 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <label x="147.32" y="106.68" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U10" gate="G$1" pin="VCCB"/>
-<wire x1="223.52" y1="76.2" x2="228.6" y2="76.2" width="0.1524" layer="91"/>
-<label x="226.06" y="76.2" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="C16" gate="G$1" pin="1"/>
 <wire x1="187.96" y1="104.14" x2="187.96" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="106.68" x2="185.42" y2="106.68" width="0.1524" layer="91"/>
@@ -11302,6 +11299,11 @@ Always enabled, powered down by loss of 3V3_EXT</text>
 <pinref part="J9" gate="G$1" pin="3V3"/>
 <wire x1="129.54" y1="50.8" x2="127" y2="50.8" width="0.1524" layer="91"/>
 <label x="127" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U10" gate="G$1" pin="VCCB"/>
+<wire x1="223.52" y1="76.2" x2="228.6" y2="76.2" width="0.1524" layer="91"/>
+<label x="226.06" y="76.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA_EXT" class="0">
