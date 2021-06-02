@@ -24,10 +24,16 @@ Alternative clock, v0.4A board
 
 Alternative crystal oscilation compaired with previous part on the v0.4A board, with MCP79412 RTC
 
+**Standard Part**
+
 ![Crystal Part Test](https://github.umn.edu/gemsiot/Project-Hyena/blob/master/Testing/TestingCaptures/CrystalTest.PNG)
+
 Yellow trace is connected to `X1` pin on RTC, blue trace is connected to `X2` pin on RTC, math output is CH1 - CH2
 
+**Alt Part**
+
 ![Crystal Alternative Part Test](https://github.umn.edu/gemsiot/Project-Hyena/blob/master/Testing/TestingCaptures/CrystalTest_AltPart.PNG)
+
 Yellow trace is connected to `X1` pin on RTC, blue trace is connected to `X2` pin on RTC, math output is CH1 - CH2
 
 
