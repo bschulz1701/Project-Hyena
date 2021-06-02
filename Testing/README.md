@@ -15,6 +15,22 @@ for T > 1000s, A = 0.3177, B = -135.2571, C = 34522.4680 (See [Datasheet](http:/
 
 <b>Test 2:</b>
 
+## Alternative Parts:
+Alternative clock, v0.4A board
+
+| Previous Manufacturer Part Number | Previous Manufacturer | Alt Manufacturer Part Number | Alt Manufacturer | 
+| ------------- | -------- | ---- | ---- |
+| ABS07-120-32.768KHZ-T | Abracon | ECS-.327-6-34QN-TR | ECS | 
+
+Alternative crystal oscilation compaired with previous part on the v0.4A board, with MCP79412 RTC
+
+![Crystal Part Test](https://github.umn.edu/gemsiot/Project-Hyena/blob/master/Testing/TestingCaptures/CrystalTest.PNG)
+Yellow trace is connected to `X1` pin on RTC, blue trace is connected to `X2` pin on RTC, math output is CH1 - CH2
+
+![Crystal Alternative Part Test](https://github.umn.edu/gemsiot/Project-Hyena/blob/master/Testing/TestingCaptures/CrystalTest_AltPart.PNG)
+Yellow trace is connected to `X1` pin on RTC, blue trace is connected to `X2` pin on RTC, math output is CH1 - CH2
+
+
 
 ## Issues:
 ### <b>Inrush current from Soil Moisture Symbiont (v0.0) trips external power switch</b>
